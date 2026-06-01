@@ -30,7 +30,12 @@ bun run docs:preview
 
 ## Deploy
 
-GitHub Pages deployment is included in `.github/workflows/deploy.yml`. For Cloudflare Pages or Vercel, use:
+GitHub Pages deployment is included in `.github/workflows/deploy.yml`.
+
+Vercel deployment is configured in `vercel.json`:
 
 - Build command: `bun run docs:build`
+- Install command: `bun install --frozen-lockfile`
 - Output directory: `docs/.vitepress/dist`
+
+For Cloudflare Pages, use the same build command and output directory.
