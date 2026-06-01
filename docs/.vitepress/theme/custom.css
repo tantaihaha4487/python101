@@ -36,3 +36,37 @@ samp {
   display: table;
   width: 100%;
 }
+
+.vp-doc .mermaid {
+  margin: 2rem 0;
+  padding: 1.25rem;
+  overflow-x: auto;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 16px;
+  background: color-mix(in srgb, var(--vp-c-bg-soft) 72%, transparent);
+}
+
+.vp-doc .mermaid svg {
+  display: block;
+  width: 100%;
+  min-width: 760px;
+  max-width: none;
+  height: auto;
+  margin: 0 auto;
+}
+
+.vp-doc .mermaid text,
+.vp-doc .mermaid tspan {
+  font-family: 'Kanit', system-ui, sans-serif !important;
+  font-size: 18px !important;
+}
+
+@media (max-width: 640px) {
+  .vp-doc .mermaid {
+    padding: 1rem;
+  }
+
+  .vp-doc .mermaid svg {
+    min-width: 640px;
+  }
+}

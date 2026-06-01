@@ -41,13 +41,21 @@ export default withMermaid(defineConfig({
   lastUpdated: true,
   mermaid: {
     theme: 'base',
+    flowchart: {
+      curve: 'basis',
+      padding: 18,
+      nodeSpacing: 58,
+      rankSpacing: 72
+    },
     themeVariables: {
       primaryColor: '#e8f5e9',
       primaryTextColor: '#1b1b1f',
       primaryBorderColor: '#2f7d32',
       lineColor: '#2f7d32',
       secondaryColor: '#e3f2fd',
-      tertiaryColor: '#fff8e1'
+      tertiaryColor: '#fff8e1',
+      fontFamily: 'Kanit, system-ui, sans-serif',
+      fontSize: '18px'
     }
   },
   themeConfig: {
