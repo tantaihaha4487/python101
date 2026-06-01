@@ -1,0 +1,13 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "rewrites": [
+    {
+      "source": "/python101",
+      "destination": "https://python101-three.vercel.app/python101/"
+    },
+    {
+      "source": "/python101/:path*",
+      "destination": "https://python101-three.vercel.app/python101/:path*"
+    }
+  ]
+}

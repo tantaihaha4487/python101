@@ -30,6 +30,8 @@ bun run docs:preview
 
 ## Deploy
 
+The site is configured to run under `/python101/` so it can be reverse-proxied from `https://docs.thanachot.xyz/python101/` without changing the browser URL.
+
 GitHub Pages deployment is included in `.github/workflows/deploy.yml`.
 
 Vercel deployment is configured in `vercel.json`:
@@ -37,5 +39,24 @@ Vercel deployment is configured in `vercel.json`:
 - Build command: `bun run docs:build`
 - Install command: `bun install --frozen-lockfile`
 - Output directory: `docs/.vitepress/dist`
+- Base path: `/python101/`
+- Python101 project rewrites: `/python101/*` -> `/*`
+
+The main `docs.thanachot.xyz` Vercel project needs matching reverse-proxy rewrites. Use `vercel.main-site.example.json` as the reference config:
+
+```json
+{
+  "rewrites": [
+    {
+      "source": "/python101",
+      "destination": "https://python101-three.vercel.app/python101/"
+    },
+    {
+      "source": "/python101/:path*",
+      "destination": "https://python101-three.vercel.app/python101/:path*"
+    }
+  ]
+}
+```
 
 For Cloudflare Pages, use the same build command and output directory.

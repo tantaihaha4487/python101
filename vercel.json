@@ -3,5 +3,15 @@
   "framework": null,
   "installCommand": "bun install --frozen-lockfile",
   "buildCommand": "bun run docs:build",
-  "outputDirectory": "docs/.vitepress/dist"
+  "outputDirectory": "docs/.vitepress/dist",
+  "rewrites": [
+    {
+      "source": "/python101",
+      "destination": "/"
+    },
+    {
+      "source": "/python101/:path*",
+      "destination": "/:path*"
+    }
+  ]
 }

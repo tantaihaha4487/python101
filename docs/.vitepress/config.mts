@@ -1,6 +1,10 @@
 import { defineConfig } from 'vitepress'
 import { withMermaid } from 'vitepress-plugin-mermaid'
 
+const base = '/python101/'
+const siteUrl = 'https://docs.thanachot.xyz/python101/'
+const siteDescription = 'Python101 is a detailed beginner Python course in Thai and English with examples, exercises, projects, and Mermaid diagrams.'
+
 const lessons = [
   { text: 'Setup / ติดตั้ง', link: 'setup' },
   { text: 'Basics / พื้นฐาน', link: 'basics' },
@@ -33,12 +37,33 @@ function sidebar(prefix: 'th' | 'en') {
 }
 
 export default withMermaid(defineConfig({
-  base: process.env.GITHUB_PAGES === 'true' ? '/python101/' : '/',
+  base,
   lang: 'th-TH',
   title: 'Python101',
-  description: 'A detailed beginner Python course in Thai and English.',
+  titleTemplate: ':title | Python101',
+  description: siteDescription,
   cleanUrls: true,
   lastUpdated: true,
+  head: [
+    ['link', { rel: 'icon', type: 'image/svg+xml', href: `${base}python-icon.svg` }],
+    ['link', { rel: 'apple-touch-icon', href: `${base}python-icon.svg` }],
+    ['link', { rel: 'canonical', href: siteUrl }],
+    ['meta', { name: 'theme-color', content: '#3776ab' }],
+    ['meta', { name: 'keywords', content: 'Python101, Python beginner course, learn Python Thai, Python ภาษาไทย, VitePress Python course' }],
+    ['meta', { property: 'og:type', content: 'website' }],
+    ['meta', { property: 'og:site_name', content: 'Python101' }],
+    ['meta', { property: 'og:title', content: 'Python101 - Learn Python from zero' }],
+    ['meta', { property: 'og:description', content: siteDescription }],
+    ['meta', { property: 'og:url', content: siteUrl }],
+    ['meta', { property: 'og:image', content: `${siteUrl}og-image.svg` }],
+    ['meta', { property: 'og:image:type', content: 'image/svg+xml' }],
+    ['meta', { property: 'og:image:width', content: '1200' }],
+    ['meta', { property: 'og:image:height', content: '630' }],
+    ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
+    ['meta', { name: 'twitter:title', content: 'Python101 - Learn Python from zero' }],
+    ['meta', { name: 'twitter:description', content: siteDescription }],
+    ['meta', { name: 'twitter:image', content: `${siteUrl}og-image.svg` }]
+  ],
   mermaid: {
     theme: 'base',
     flowchart: {
@@ -59,6 +84,7 @@ export default withMermaid(defineConfig({
     }
   },
   themeConfig: {
+    logo: '/python-icon.svg',
     search: {
       provider: 'local'
     },

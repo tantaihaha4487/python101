@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Python101 social preview</title>
+  <desc id="desc">Social preview image for Python101, a beginner Python course in Thai and English.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1200" y1="0" y2="630" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#f7fbff"/>
+      <stop offset=".5" stop-color="#edf8f0"/>
+      <stop offset="1" stop-color="#fff8d7"/>
+    </linearGradient>
+    <linearGradient id="blue" x1="0" x2="1" y1="0" y2="1">
+      <stop stop-color="#3776ab"/>
+      <stop offset="1" stop-color="#1f4f7a"/>
+    </linearGradient>
+    <linearGradient id="yellow" x1="0" x2="1" y1="1" y2="0">
+      <stop stop-color="#ffd43b"/>
+      <stop offset="1" stop-color="#ffe873"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="20" stdDeviation="24" flood-color="#102033" flood-opacity=".18"/>
+    </filter>
+  </defs>
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <circle cx="990" cy="100" r="180" fill="#3776ab" opacity=".08"/>
+  <circle cx="110" cy="545" r="220" fill="#ffd43b" opacity=".18"/>
+  <g transform="translate(840 145) scale(2.15)" filter="url(#shadow)">
+    <rect width="128" height="128" rx="30" fill="#fff"/>
+    <path fill="url(#blue)" d="M34 18h39c12 0 21 9 21 21v13H59c-8 0-14 6-14 14v8H27c-8 0-14-6-14-14V39c0-12 9-21 21-21Z"/>
+    <path fill="url(#yellow)" d="M94 110H55c-12 0-21-9-21-21V76h35c8 0 14-6 14-14v-8h18c8 0 14 6 14 14v21c0 12-9 21-21 21Z"/>
+    <circle cx="44" cy="36" r="5" fill="#fff"/>
+    <circle cx="84" cy="92" r="5" fill="#3b2f00" opacity=".72"/>
+    <text x="64" y="72" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace" font-size="28" font-weight="800" fill="#102033">Py</text>
+  </g>
+  <text x="80" y="170" font-family="Kanit, system-ui, sans-serif" font-size="92" font-weight="700" fill="#102033">Python101</text>
+  <text x="84" y="245" font-family="Kanit, system-ui, sans-serif" font-size="40" font-weight="500" fill="#2f7d32">เรียน Python จากศูนย์ แบบเป็นขั้นตอน</text>
+  <text x="84" y="310" font-family="Kanit, system-ui, sans-serif" font-size="36" font-weight="400" fill="#34495e">Detailed beginner Python course in Thai and English</text>
+  <g font-family="Kanit, system-ui, sans-serif" font-size="28" font-weight="500" fill="#102033">
+    <text x="88" y="420">Thai first</text>
+    <text x="88" y="470">Examples, exercises, projects</text>
+    <text x="88" y="520">Built with VitePress + Bun</text>
+  </g>
+  <g fill="#2f7d32">
+    <circle cx="58" cy="411" r="10"/>
+    <circle cx="58" cy="461" r="10"/>
+    <circle cx="58" cy="511" r="10"/>
+  </g>
+</svg>
