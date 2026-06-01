@@ -41,6 +41,7 @@ Vercel deployment is configured in `vercel.json`:
 - Output directory: `docs/.vitepress/dist`
 - Base path: `/python101/`
 - Python101 project rewrites: `/python101/*` -> `/*`
+- Social preview image: `docs/public/og-image.png`
 
 The main `docs.thanachot.xyz` Vercel project needs matching reverse-proxy rewrites. Use `vercel.main-site.example.json` as the reference config:
 

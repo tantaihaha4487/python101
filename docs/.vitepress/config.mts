@@ -56,14 +56,14 @@ export default withMermaid(defineConfig({
     ['meta', { property: 'og:title', content: 'Python101 - Learn Python from zero' }],
     ['meta', { property: 'og:description', content: siteDescription }],
     ['meta', { property: 'og:url', content: siteUrl }],
-    ['meta', { property: 'og:image', content: `${siteUrl}og-image.svg` }],
-    ['meta', { property: 'og:image:type', content: 'image/svg+xml' }],
+    ['meta', { property: 'og:image', content: `${siteUrl}og-image.png` }],
+    ['meta', { property: 'og:image:type', content: 'image/png' }],
     ['meta', { property: 'og:image:width', content: '1200' }],
     ['meta', { property: 'og:image:height', content: '630' }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
     ['meta', { name: 'twitter:title', content: 'Python101 - Learn Python from zero' }],
     ['meta', { name: 'twitter:description', content: siteDescription }],
-    ['meta', { name: 'twitter:image', content: `${siteUrl}og-image.svg` }]
+    ['meta', { name: 'twitter:image', content: `${siteUrl}og-image.png` }]
   ],
   mermaid: {
     theme: 'base',
