@@ -30,7 +30,7 @@ bun run docs:preview
 
 ## Deploy
 
-The site is configured to run under `/python101/` so it can be reverse-proxied from `https://docs.thanachot.xyz/python101/` without changing the browser URL.
+The production build is configured to run under `/python101/` so it can be reverse-proxied from `https://docs.thanachot.xyz/python101/` without changing the browser URL. Local dev still runs from `/`.
 
 GitHub Pages deployment is included in `.github/workflows/deploy.yml`.
 

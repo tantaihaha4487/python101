@@ -1,7 +1,8 @@
 import { defineConfig } from 'vitepress'
 import { withMermaid } from 'vitepress-plugin-mermaid'
 
-const base = '/python101/'
+const isProduction = process.env.NODE_ENV === 'production'
+const base = isProduction ? '/python101/' : '/'
 const siteUrl = 'https://docs.thanachot.xyz/python101/'
 const siteDescription = 'Python101 is a detailed beginner Python course in Thai and English with examples, exercises, projects, and Mermaid diagrams.'
 
