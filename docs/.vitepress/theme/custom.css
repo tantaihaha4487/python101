@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap');
+
+:root {
+  --vp-font-family-base: 'Kanit', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --vp-c-brand-1: #2f7d32;
+  --vp-c-brand-2: #3fa447;
+  --vp-c-brand-3: #7ac779;
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: linear-gradient(120deg, #2f7d32, #1d66d2);
+  --vp-home-hero-image-background-image: linear-gradient(135deg, #7ac779 10%, #7bb2ff 70%);
+  --vp-home-hero-image-filter: blur(52px);
+}
+
+body {
+  line-height: 1.8;
+}
+
+code,
+pre,
+kbd,
+samp {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', monospace;
+}
+
+.VPDoc h1,
+.VPDoc h2,
+.VPDoc h3 {
+  letter-spacing: 0.01em;
+}
+
+.custom-block.tip {
+  border-color: var(--vp-c-brand-2);
+}
+
+.vp-doc table {
+  display: table;
+  width: 100%;
+}

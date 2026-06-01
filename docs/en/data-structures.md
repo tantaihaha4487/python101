@@ -1,0 +1,79 @@
+# Data Structures
+
+Data structures store multiple values. Python beginners should know lists, tuples, dictionaries, and sets.
+
+## List
+
+A list stores ordered values and can be changed.
+
+```python
+scores = [80, 75, 90]
+scores.append(88)
+print(scores[0])
+print(len(scores))
+```
+
+## Tuple
+
+A tuple is like a list, but it cannot be changed after creation.
+
+```python
+point = (10, 20)
+print(point[0])
+```
+
+## Dictionary
+
+A dictionary stores key-value pairs.
+
+```python
+student = {
+    "name": "Mali",
+    "age": 16,
+    "grade": "A"
+}
+
+print(student["name"])
+student["age"] = 17
+```
+
+## Set
+
+A set stores unique values and does not keep a normal order.
+
+```python
+tags = {"python", "beginner", "python"}
+print(tags)
+```
+
+## Slicing
+
+```python
+numbers = [10, 20, 30, 40, 50]
+print(numbers[1:4])
+print(numbers[:3])
+print(numbers[-1])
+```
+
+## Which one should you use?
+
+| Need | Use |
+| --- | --- |
+| Editable ordered items | list |
+| Fixed group of values | tuple |
+| Named values | dictionary |
+| Unique values | set |
+
+## Practice
+
+1. Create a list of friends and add one more name.
+2. Create a dictionary for one book.
+3. Ask for several words and use a set to find unique words.
+
+## Mini challenge
+
+Create a simple contact book using a dictionary for names and phone numbers.
+
+## Summary
+
+Data structures help you organize data correctly for the problem you are solving.
