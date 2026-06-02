@@ -1,6 +1,6 @@
 # Functions
 
-Function คือกล่องคำสั่งที่ตั้งชื่อได้ ใช้ซ้ำได้ และช่วยให้โค้ดอ่านง่ายขึ้น
+Function คือชุดคำสั่งที่ตั้งชื่อไว้ ใช้เรียกซ้ำได้หลายครั้ง และช่วยแยกงานแต่ละส่วนให้โค้ดอ่านง่ายขึ้น
 
 ## สร้าง function
 
@@ -19,6 +19,8 @@ greet()
 
 ## Parameters
 
+Parameters คือค่าที่ส่งเข้าไปใน function เพื่อให้ function ทำงานกับข้อมูลต่างกันได้
+
 ```python
 def greet(name):
     print(f"สวัสดี {name}")
@@ -29,6 +31,8 @@ greet("Mali")
 ผลลัพธ์: `สวัสดี Mali`
 
 ## Return value
+
+`return` ใช้ส่งค่ากลับออกมาจาก function เพื่อเอาไปเก็บ ใช้ต่อ หรือคำนวณต่อได้
 
 ```python
 def add(a, b):
@@ -44,6 +48,8 @@ print(result)
 
 ## Default arguments
 
+Default arguments คือค่าตั้งต้นที่ function ใช้เมื่อเราไม่ส่งค่าเข้ามา
+
 ```python
 def greet(name="friend"):
     print(f"Hello {name}")
@@ -52,9 +58,18 @@ greet()
 greet("Anan")
 ```
 
+ผลลัพธ์:
+
+```text
+Hello friend
+Hello Anan
+```
+
 ## Scope
 
 ตัวแปรที่สร้างใน function จะใช้ได้ใน function นั้นเท่านั้น
+
+ถ้าเรียกใช้ตัวแปรนั้นนอก function จะเกิด error เพราะตัวแปรอยู่นอกขอบเขตที่เข้าถึงได้
 
 ```python
 def show_age():
@@ -64,6 +79,8 @@ def show_age():
 show_age()
 ```
 
+ผลลัพธ์: `16`
+
 ## ข้อผิดพลาดที่พบบ่อย
 
 - ลืมเรียก function หลังสร้าง
@@ -72,9 +89,9 @@ show_age()
 
 ## แบบฝึกหัด
 
-1. สร้าง function `celsius_to_fahrenheit(celsius)` ที่ `return` ค่า Fahrenheit แล้วทดสอบด้วย `0`
-2. สร้าง function `rectangle_area(width, height)` ที่ `return` พื้นที่ แล้วทดสอบด้วย 4 และ 5
-3. สร้าง function `is_even(number)` ที่ `return` `True` ถ้าเลขเป็นคู่ และ `False` ถ้าเลขเป็นคี่ แล้วทดสอบด้วย 2 และ 3
+1. สร้าง function `celsius_to_fahrenheit(celsius)` ที่รับองศา Celsius แล้ว `return` ค่า Fahrenheit จากนั้นทดสอบด้วย `0`
+2. สร้าง function `rectangle_area(width, height)` ที่รับความกว้างและความสูง แล้ว `return` พื้นที่ จากนั้นทดสอบด้วย 4 และ 5
+3. สร้าง function `is_even(number)` ที่รับเลข 1 ค่า แล้ว `return` `True` ถ้าเลขเป็นคู่ และ `False` ถ้าเลขเป็นคี่ จากนั้นทดสอบด้วย 2 และ 3
 
 <details class="answer-reveal">
 <summary>ดูเฉลยแบบฝึกหัด</summary>
@@ -128,7 +145,7 @@ False
 
 ## Mini challenge
 
-เขียน calculator ที่รับเลข 2 ตัวและเครื่องหมาย `+`, `-`, `*`, `/` โดยแยกแต่ละ operation เป็น function `add`, `subtract`, `multiply`, `divide`; ต้องจัดการกรณีหารด้วยศูนย์และเครื่องหมายที่ไม่รู้จักด้วย
+เขียน calculator ที่รับเลข 2 ตัวและเครื่องหมาย `+`, `-`, `*`, `/` โดยแยกแต่ละ operation เป็น function `add`, `subtract`, `multiply`, `divide`; ถ้าหารด้วยศูนย์ให้แสดงข้อความเตือน และถ้าใส่เครื่องหมายอื่นให้แสดงว่าไม่รู้จักเครื่องหมายนั้น
 
 <details class="answer-reveal">
 <summary>ดูเฉลย Mini challenge</summary>

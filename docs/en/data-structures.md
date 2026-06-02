@@ -1,10 +1,10 @@
 # Data Structures
 
-Data structures store multiple values. Python beginners should know lists, tuples, dictionaries, and sets.
+Data structures are ways to store multiple values. Python beginners should know lists, tuples, dictionaries, and sets.
 
 ## List
 
-A list stores ordered values and can be changed.
+A list stores ordered values and can be changed. Use it when items may be added, removed, or updated.
 
 ```python
 scores = [80, 75, 90]
@@ -22,7 +22,7 @@ Output:
 
 ## Tuple
 
-A tuple is like a list, but it cannot be changed after creation.
+A tuple is like a list, but it cannot be changed after creation. Use it for values that should stay fixed, such as coordinates.
 
 ```python
 point = (10, 20)
@@ -33,7 +33,7 @@ The output is `10` because indexes start at 0.
 
 ## Dictionary
 
-A dictionary stores key-value pairs.
+A dictionary stores key-value pairs. Use it when you want to access data by name instead of position.
 
 ```python
 student = {
@@ -56,7 +56,7 @@ Mali
 
 ## Set
 
-A set stores unique values and does not keep a normal order.
+A set stores unique values and does not keep a normal order. Use it to remove duplicates from a collection.
 
 ```python
 tags = {"python", "beginner", "python"}
@@ -86,7 +86,7 @@ Output:
 50
 ```
 
-`numbers[1:4]` means start at index 1 and stop before index 4.
+`numbers[1:4]` means start at index 1 and stop before index 4, so it returns items at positions 1, 2, and 3.
 
 ## Which one should you use?
 
@@ -99,16 +99,16 @@ Output:
 
 ## Practice
 
-1. Create a `friends` list with at least three names, use `.append()` to add one more name, then print the full list.
-2. Create a `book` dictionary with `title`, `author`, and `pages` keys, then print the book title from the `title` key.
-3. Use a loop to ask for five words, store them in a list, then convert the list to a set to print only unique words.
+1. Create a `friends` list with at least three names, use `.append()` to add one more name, then `print()` the full list.
+2. Create a `book` dictionary with `title`, `author`, and `pages` keys, then `print()` the value from the `title` key.
+3. Use a loop to ask for five words, store them in a list, then convert the list to a set to see which words are duplicated.
 
 <details class="answer-reveal">
 <summary>Show practice answer</summary>
 
 ### Answer 1
 
-Use a list when the data is an ordered collection that can grow.
+Use a list when the data is an ordered collection that can grow or change.
 
 ```python
 friends = ["Mali", "Anan", "Nok"]
@@ -120,7 +120,7 @@ Output: `['Mali', 'Anan', 'Nok', 'Som']`
 
 ### Answer 2
 
-Use a dictionary when each value has a named key, such as `title`, `author`, and `pages`.
+Use a dictionary when each value has a named key, such as `title`, `author`, and `pages`, and you want to look it up by key.
 
 ```python
 book = {
@@ -150,7 +150,7 @@ print(unique_words)
 
 ## Mini challenge
 
-Create a contact book with a dictionary where each name is a key and each phone number is a value. Ask for a name to search. If it exists, print the phone number; if not, ask for a new phone number and add it.
+Create a contact book with a dictionary where each name is a key and each phone number is a value. Ask for a name to search. If it exists, print the phone number; if not, ask for a new phone number, add it, and show the updated contact.
 
 <details class="answer-reveal">
 <summary>Show mini challenge answer</summary>
