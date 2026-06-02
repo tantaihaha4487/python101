@@ -99,9 +99,9 @@ Output:
 
 ## Practice
 
-1. Create a list of friends and add one more name.
-2. Create a dictionary for one book.
-3. Ask for several words and use a set to find unique words.
+1. Create a `friends` list with at least three names, use `.append()` to add one more name, then print the full list.
+2. Create a `book` dictionary with `title`, `author`, and `pages` keys, then print the book title from the `title` key.
+3. Use a loop to ask for five words, store them in a list, then convert the list to a set to print only unique words.
 
 <details class="answer-reveal">
 <summary>Show practice answer</summary>
@@ -150,7 +150,7 @@ print(unique_words)
 
 ## Mini challenge
 
-Create a simple contact book using a dictionary for names and phone numbers.
+Create a contact book with a dictionary where each name is a key and each phone number is a value. Ask for a name to search. If it exists, print the phone number; if not, ask for a new phone number and add it.
 
 <details class="answer-reveal">
 <summary>Show mini challenge answer</summary>

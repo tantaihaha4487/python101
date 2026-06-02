@@ -121,9 +121,9 @@ If your program only calculates one value and stops, a normal function may be cl
 
 ## Practice
 
-1. Create a `Book` class with title and author.
-2. Create a `TodoItem` class with title and completed status.
-3. Add a method that marks a todo as complete.
+1. Create a `Book` class that receives `title` and `author` in `__init__`, then stores them as `self.title` and `self.author`.
+2. Create a `TodoItem` class that receives `title` and sets `self.completed = False` when the object is created.
+3. Add a `mark_done()` method to `TodoItem` that changes `completed` from `False` to `True`, then test before and after calling the method.
 
 <details class="answer-reveal">
 <summary>Show practice answer</summary>
@@ -178,7 +178,7 @@ print(book.author)
 
 ## Mini challenge
 
-Create a `BankAccount` class that supports deposit, withdraw, and balance display. Prevent withdrawals greater than the balance.
+Create a `BankAccount` class with `owner` and `balance`. It must have `deposit(amount)`, `withdraw(amount)`, and `show_balance()` methods. Handle deposits/withdrawals less than or equal to 0, and prevent withdrawing more than the current balance.
 
 <details class="answer-reveal">
 <summary>Show mini challenge answer</summary>

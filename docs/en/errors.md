@@ -60,9 +60,9 @@ Read the last line first: `TypeError` says a string cannot be added to an intege
 
 ## Practice
 
-1. Ask for a number and handle invalid input.
-2. Read a file and show a clear message if it does not exist.
-3. Create a calculator that handles division by zero.
+1. Ask for input and convert it to `int`; if the user types letters, catch `ValueError` and print a message asking for a number.
+2. Read `data.txt`; if the file does not exist, catch `FileNotFoundError` and print a clear message.
+3. Ask for two numbers and divide them; handle both non-numeric input (`ValueError`) and division by zero (`ZeroDivisionError`).
 
 <details class="answer-reveal">
 <summary>Show practice answer</summary>
@@ -110,7 +110,7 @@ except ZeroDivisionError:
 
 ## Mini challenge
 
-Improve your number guessing game so it does not crash when the user types letters.
+Improve a 1-10 number guessing game so input is inside `try`; if the user types letters such as `abc`, print `Please enter a number`, ask again with `continue`, and do not count it as an attempt.
 
 <details class="answer-reveal">
 <summary>Show mini challenge answer</summary>

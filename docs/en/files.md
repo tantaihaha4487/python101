@@ -57,9 +57,9 @@ with open("note.txt", "r", encoding="utf-8") as file:
 
 ## Practice
 
-1. Save a user's name to a file.
-2. Read a file and count the lines.
-3. Create a notes app that appends new notes.
+1. Ask for a user's name with `input()`, then write it to `user.txt` using `encoding="utf-8"`.
+2. Open `user.txt`, read all lines with `readlines()`, and print the number of lines with `len()`.
+3. Ask for a new note, then append it to `notes.txt` without deleting old notes.
 
 <details class="answer-reveal">
 <summary>Show practice answer</summary>
@@ -98,7 +98,7 @@ with open("notes.txt", "a", encoding="utf-8") as file:
 
 ## Mini challenge
 
-Create a text-file todo app that can add tasks, show all tasks, and save them to `todo.txt`.
+Create a text-file todo app that accepts `add`, `list`, and `quit` commands: `add` saves a new task to `todo.txt`, `list` shows all tasks, `quit` ends the program, and a first-time `list` should print `No tasks yet` instead of crashing when `todo.txt` does not exist.
 
 <details class="answer-reveal">
 <summary>Show mini challenge answer</summary>

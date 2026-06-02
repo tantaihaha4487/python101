@@ -118,9 +118,9 @@ I like orange
 
 ## Practice
 
-1. Print numbers 1 to 20.
-2. Print even numbers from 2 to 50.
-3. Ask for five numbers and calculate the total.
+1. Use `for` and `range()` to print numbers 1 through 20, including 20.
+2. Use `for` and `range()` to print even numbers from 2 through 50, including 50.
+3. Use a loop to ask for five numbers, convert each one to `int`, and add them to a `total` variable.
 
 <details class="answer-reveal">
 <summary>Show practice answer</summary>
@@ -160,7 +160,7 @@ print(f"Total score: {total}")
 
 ## Mini challenge
 
-Create a number guessing game where the user keeps guessing until correct.
+Create a 1-10 number guessing game with a `secret` variable. Keep asking until the user guesses correctly, print `Too low` or `Too high` while guessing, and print the number of attempts when correct.
 
 <details class="answer-reveal">
 <summary>Show mini challenge answer</summary>

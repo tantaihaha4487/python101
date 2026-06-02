@@ -57,9 +57,9 @@ with open("note.txt", "r", encoding="utf-8") as file:
 
 ## แบบฝึกหัด
 
-1. สร้างโปรแกรมบันทึกชื่อผู้ใช้ลงไฟล์
-2. อ่านไฟล์แล้วนับจำนวนบรรทัด
-3. สร้าง note app ที่เพิ่ม note ใหม่ต่อท้ายไฟล์
+1. รับชื่อผู้ใช้จาก `input()` แล้วเขียนลงไฟล์ `user.txt` โดยใช้ `encoding="utf-8"`
+2. เปิดไฟล์ `user.txt` อ่านทุกบรรทัดด้วย `readlines()` แล้วแสดงจำนวนบรรทัดด้วย `len()`
+3. รับ note ใหม่จากผู้ใช้ แล้วเพิ่มต่อท้ายไฟล์ `notes.txt` โดยไม่ลบ note เดิม
 
 <details class="answer-reveal">
 <summary>ดูเฉลยแบบฝึกหัด</summary>
@@ -98,7 +98,7 @@ with open("notes.txt", "a", encoding="utf-8") as file:
 
 ## Mini challenge
 
-สร้าง todo app แบบ text file: เพิ่มงาน แสดงงานทั้งหมด และบันทึกลง `todo.txt`
+สร้าง todo app แบบ text file ที่รับคำสั่ง `add`, `list`, และ `quit`: `add` ให้เพิ่มงานใหม่ลง `todo.txt`, `list` ให้แสดงงานทั้งหมด, `quit` ให้จบโปรแกรม และถ้ายังไม่มี `todo.txt` ต้องแสดงว่า `ยังไม่มีงาน` โดยไม่ crash
 
 <details class="answer-reveal">
 <summary>ดูเฉลย Mini challenge</summary>

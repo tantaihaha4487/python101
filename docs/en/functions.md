@@ -72,9 +72,9 @@ show_age()
 
 ## Practice
 
-1. Create a Celsius to Fahrenheit function.
-2. Create a rectangle area function.
-3. Create a function that checks even or odd numbers.
+1. Create `celsius_to_fahrenheit(celsius)` that `return`s Fahrenheit, then test it with `0`.
+2. Create `rectangle_area(width, height)` that `return`s the area, then test it with 4 and 5.
+3. Create `is_even(number)` that `return`s `True` for even numbers and `False` for odd numbers, then test it with 2 and 3.
 
 <details class="answer-reveal">
 <summary>Show practice answer</summary>
@@ -128,7 +128,7 @@ False
 
 ## Mini challenge
 
-Refactor a calculator so each operation is a function: `add`, `subtract`, `multiply`, and `divide`.
+Write a calculator that asks for two numbers and an operator: `+`, `-`, `*`, or `/`. Put each operation in its own function: `add`, `subtract`, `multiply`, and `divide`. Also handle division by zero and unknown operators.
 
 <details class="answer-reveal">
 <summary>Show mini challenge answer</summary>

@@ -69,9 +69,9 @@ python -m venv .venv
 
 ## Practice
 
-1. Use `random` to generate a number from 1 to 100.
-2. Use `datetime` to print today's date.
-3. Create your own module with a tax calculation function.
+1. Use `random.randint(1, 100)` to generate a number from 1 through 100, then print it.
+2. Use `date.today()` from the `datetime` module to print today's date.
+3. Create `tax_tools.py` with an `add_tax(price, tax_percent)` function, then import and use it in `main.py`.
 
 <details class="answer-reveal">
 <summary>Show practice answer</summary>
@@ -121,7 +121,7 @@ print(add_tax(100, 7))
 
 ## Mini challenge
 
-Build a password generator using `random` and strings of letters and numbers.
+Build a password generator that asks for a password length. If the length is less than or equal to 0, print a warning. If it is valid, use `random.choice()` to choose letters and numbers until the password reaches the requested length.
 
 <details class="answer-reveal">
 <summary>Show mini challenge answer</summary>

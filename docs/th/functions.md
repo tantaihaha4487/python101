@@ -72,9 +72,9 @@ show_age()
 
 ## แบบฝึกหัด
 
-1. สร้าง function แปลง Celsius เป็น Fahrenheit
-2. สร้าง function คำนวณพื้นที่สี่เหลี่ยม
-3. สร้าง function ตรวจว่าเลขเป็นคู่หรือคี่
+1. สร้าง function `celsius_to_fahrenheit(celsius)` ที่ `return` ค่า Fahrenheit แล้วทดสอบด้วย `0`
+2. สร้าง function `rectangle_area(width, height)` ที่ `return` พื้นที่ แล้วทดสอบด้วย 4 และ 5
+3. สร้าง function `is_even(number)` ที่ `return` `True` ถ้าเลขเป็นคู่ และ `False` ถ้าเลขเป็นคี่ แล้วทดสอบด้วย 2 และ 3
 
 <details class="answer-reveal">
 <summary>ดูเฉลยแบบฝึกหัด</summary>
@@ -128,7 +128,7 @@ False
 
 ## Mini challenge
 
-แยกโปรแกรม calculator ให้แต่ละ operation เป็น function เช่น `add`, `subtract`, `multiply`, `divide`
+เขียน calculator ที่รับเลข 2 ตัวและเครื่องหมาย `+`, `-`, `*`, `/` โดยแยกแต่ละ operation เป็น function `add`, `subtract`, `multiply`, `divide`; ต้องจัดการกรณีหารด้วยศูนย์และเครื่องหมายที่ไม่รู้จักด้วย
 
 <details class="answer-reveal">
 <summary>ดูเฉลย Mini challenge</summary>

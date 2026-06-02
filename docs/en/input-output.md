@@ -71,9 +71,9 @@ Price: 199.99
 
 ## Practice
 
-1. Ask for a name and age, then print the age ten years from now.
-2. Ask for three scores and calculate the average.
-3. Ask for a price and discount percentage, then calculate the final price.
+1. Ask for `name` and `age`, convert `age` to `int`, then print the age ten years from now.
+2. Ask for three scores, convert them to `float`, calculate the average, and print it with two decimal places.
+3. Ask for an item price and discount percentage, convert both to `float`, then print the price after the discount.
 
 <details class="answer-reveal">
 <summary>Show practice answer</summary>
@@ -115,7 +115,7 @@ print(f"Final price: {final_price:.2f}")
 
 ## Mini challenge
 
-Create a Celsius to Fahrenheit converter using `F = C * 9 / 5 + 32`.
+Create a program that asks for a Celsius temperature, converts it to `float`, calculates Fahrenheit with `F = C * 9 / 5 + 32`, then prints both the Celsius and Fahrenheit values.
 
 <details class="answer-reveal">
 <summary>Show mini challenge answer</summary>

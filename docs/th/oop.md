@@ -121,9 +121,9 @@ task.show_status()
 
 ## แบบฝึกหัด
 
-1. สร้าง class `Book` ที่มี title และ author
-2. สร้าง class `TodoItem` ที่มี title และ completed
-3. เพิ่ม method สำหรับเปลี่ยนสถานะ todo เป็นเสร็จแล้ว
+1. สร้าง class `Book` ที่รับ `title` และ `author` ใน `__init__` แล้วเก็บเป็น `self.title` และ `self.author`
+2. สร้าง class `TodoItem` ที่รับ `title` และกำหนด `self.completed = False` ตอนสร้าง object
+3. เพิ่ม method `mark_done()` ใน `TodoItem` เพื่อเปลี่ยน `completed` จาก `False` เป็น `True` แล้วทดสอบก่อนและหลังเรียก method
 
 <details class="answer-reveal">
 <summary>ดูเฉลยแบบฝึกหัด</summary>
@@ -178,7 +178,7 @@ print(book.author)
 
 ## Mini challenge
 
-สร้าง class `BankAccount` ที่ฝาก ถอน และแสดงยอดเงินได้ พร้อมตรวจว่ายอดถอนต้องไม่เกินยอดเงิน
+สร้าง class `BankAccount` ที่มี `owner` และ `balance`; ต้องมี method `deposit(amount)`, `withdraw(amount)`, และ `show_balance()` โดยต้องจัดการกรณีฝาก/ถอนยอดน้อยกว่าหรือเท่ากับ 0 และกรณีถอนเกินยอดเงิน
 
 <details class="answer-reveal">
 <summary>ดูเฉลย Mini challenge</summary>

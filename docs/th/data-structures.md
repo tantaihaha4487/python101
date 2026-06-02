@@ -99,9 +99,9 @@ print(numbers[-1])
 
 ## แบบฝึกหัด
 
-1. สร้าง list รายชื่อเพื่อน แล้วเพิ่มชื่อใหม่
-2. สร้าง dictionary เก็บข้อมูลหนังสือ 1 เล่ม
-3. รับคำจากผู้ใช้หลายคำ แล้วใช้ set หาคำที่ไม่ซ้ำ
+1. สร้าง list ชื่อ `friends` ที่มีอย่างน้อย 3 ชื่อ จากนั้นใช้ `.append()` เพิ่มชื่ออีก 1 ชื่อ และแสดง list ทั้งหมด
+2. สร้าง dictionary ชื่อ `book` ที่มี key `title`, `author`, และ `pages` แล้วแสดงชื่อหนังสือจาก key `title`
+3. ใช้ loop รับคำจากผู้ใช้ 5 คำ เก็บใน list แล้วแปลงเป็น set เพื่อแสดงเฉพาะคำที่ไม่ซ้ำ
 
 <details class="answer-reveal">
 <summary>ดูเฉลยแบบฝึกหัด</summary>
@@ -150,7 +150,7 @@ print(unique_words)
 
 ## Mini challenge
 
-สร้างโปรแกรม contact book แบบง่าย เก็บชื่อและเบอร์โทรใน dictionary
+สร้าง contact book ด้วย dictionary โดยให้ชื่อเป็น key และเบอร์โทรเป็น value รับชื่อที่ต้องการค้นหา ถ้ามีชื่อให้แสดงเบอร์ ถ้าไม่มีให้รับเบอร์ใหม่และเพิ่มเข้า dictionary
 
 <details class="answer-reveal">
 <summary>ดูเฉลย Mini challenge</summary>

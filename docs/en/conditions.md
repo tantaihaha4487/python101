@@ -72,9 +72,9 @@ A condition should read like a clear sentence. For example, `age >= 18` means ag
 
 ## Practice
 
-1. Ask for age and classify child, teen, or adult.
-2. Ask for a score and print a grade A-F.
-3. Ask for username/password and check login.
+1. Ask for `age` and print `Child` if it is under 13, `Teen` if it is under 20, and `Adult` otherwise.
+2. Ask for `score` and print grade A/B/C/D/F using score ranges 80, 70, 60, 50, and below 50.
+3. Ask for `username` and `password`; allow login only when username is `admin` and password is `1234`.
 
 <details class="answer-reveal">
 <summary>Show practice answer</summary>
@@ -128,7 +128,7 @@ else:
 
 ## Mini challenge
 
-Create a clothing suggestion program based on temperature.
+Create a program that asks for a numeric temperature and suggests clothing for three cases: below 18 is cold, 18 to below 28 is cool, and 28 or higher is hot.
 
 <details class="answer-reveal">
 <summary>Show mini challenge answer</summary>

@@ -80,9 +80,9 @@ print(age + 1)
 
 ## Practice
 
-1. Create variables for your name, age, school, and favorite subject.
-2. Print them in a sentence using an f-string.
-3. Use `type()` on at least three values.
+1. Create `name`, `age`, `school`, and `favorite_subject` variables with your own example values.
+2. Use an f-string to print one sentence that includes all four variable values.
+3. Use `type()` on at least three variables and show the results with `print()`.
 
 <details class="answer-reveal">
 <summary>Show practice answer</summary>
@@ -120,7 +120,7 @@ print(type(favorite_subject))
 
 ## Mini challenge
 
-Write a program that calculates your age five years from now and prints a sentence.
+Write a program with `name` and `age` variables. Calculate `future_age = age + 5`, then print a sentence that says how old that person will be in 5 years.
 
 <details class="answer-reveal">
 <summary>Show mini challenge answer</summary>

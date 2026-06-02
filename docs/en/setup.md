@@ -75,9 +75,9 @@ Exit with `exit()`.
 
 ## Practice
 
-1. Create `intro.py`.
-2. Print your name, age, and what you want to build with Python.
-3. Run the file from the terminal.
+1. Create a file named `intro.py` in your practice folder.
+2. In that file, use three `print()` lines to show your name, age, and what you want to build with Python.
+3. Run the file from the terminal with `python intro.py` and check that all three lines appear.
 
 <details class="answer-reveal">
 <summary>Show answer</summary>

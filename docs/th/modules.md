@@ -69,9 +69,9 @@ python -m venv .venv
 
 ## แบบฝึกหัด
 
-1. ใช้ `random` สุ่มเลข 1-100
-2. ใช้ `datetime` แสดงวันที่ปัจจุบัน
-3. สร้าง module เองที่มี function คำนวณภาษี
+1. ใช้ `random.randint(1, 100)` สุ่มเลขตั้งแต่ 1 ถึง 100 แล้วแสดงผลด้วย `print()`
+2. ใช้ `date.today()` จาก module `datetime` เพื่อแสดงวันที่ปัจจุบัน
+3. สร้างไฟล์ `tax_tools.py` ที่มี function `add_tax(price, tax_percent)` แล้ว import มาใช้ใน `main.py`
 
 <details class="answer-reveal">
 <summary>ดูเฉลยแบบฝึกหัด</summary>
@@ -121,7 +121,7 @@ print(add_tax(100, 7))
 
 ## Mini challenge
 
-สร้าง password generator ด้วย `random` และ string ของตัวอักษร/ตัวเลข
+สร้าง password generator ที่รับความยาวรหัสผ่านจากผู้ใช้ ถ้าความยาวน้อยกว่าหรือเท่ากับ 0 ให้แสดงข้อความเตือน ถ้าถูกต้องให้สุ่มตัวอักษรและตัวเลขด้วย `random.choice()` จนครบความยาวที่กำหนด
 
 <details class="answer-reveal">
 <summary>ดูเฉลย Mini challenge</summary>
