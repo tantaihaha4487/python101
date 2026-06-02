@@ -78,7 +78,3 @@ flowchart LR
   F --> G["OOP"]
   G --> H["Beginner Projects"]
 ```
-
-## Deployment
-
-This site is built with VitePress and Bun. It includes deployment configuration for GitHub Pages and Vercel, with static output generated at `docs/.vitepress/dist`.
