@@ -11,6 +11,8 @@ number = random.randint(1, 10)
 print(number)
 ```
 
+The output is a random number, such as `7`. The next run may show a different number.
+
 ## import only what you need
 
 ```python
@@ -18,6 +20,8 @@ from math import sqrt
 
 print(sqrt(16))
 ```
+
+Output: `4.0`
 
 ## Built-in modules to know
 
@@ -43,7 +47,11 @@ from helpers import add
 print(add(2, 3))
 ```
 
+Output: `5`
+
 ## What is pip?
+
+This section is a preview for later projects. At the beginning, using built-in modules is enough.
 
 `pip` installs external packages, such as `requests`.
 
@@ -53,7 +61,7 @@ python -m pip install requests
 
 ## Virtual environments
 
-A virtual environment separates dependencies for each project.
+A virtual environment separates dependencies for each project. If you are still learning the basics, just remember that this is a tool for real projects later.
 
 ```bash
 python -m venv .venv

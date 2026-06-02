@@ -11,6 +11,16 @@ for number in range(1, 6):
     print(number)
 ```
 
+Output:
+
+```text
+1
+2
+3
+4
+5
+```
+
 `range(1, 6)` gives 1 through 5. The end value is not included.
 
 ## for loop flow
@@ -39,6 +49,17 @@ while password != "python":
 print("Login successful")
 ```
 
+Example run:
+
+```text
+Password: 1234
+Password: hello
+Password: python
+Login successful
+```
+
+The program keeps asking because `password != "python"` is still true until the user types `python`.
+
 ```mermaid
 flowchart TD
   A["Start while"] --> B{"Condition is true?"}
@@ -59,6 +80,8 @@ for number in range(1, 10):
     print(number)
 ```
 
+The output is `1` through `4` because the loop stops immediately when `number == 5`.
+
 `continue` skips the current loop step.
 
 ```python
@@ -68,6 +91,8 @@ for number in range(1, 6):
     print(number)
 ```
 
+The output is `1`, `2`, `4`, `5` because the step where `number == 3` is skipped.
+
 ## Loop through a list
 
 ```python
@@ -75,6 +100,14 @@ fruits = ["apple", "banana", "orange"]
 
 for fruit in fruits:
     print(f"I like {fruit}")
+```
+
+Output:
+
+```text
+I like apple
+I like banana
+I like orange
 ```
 
 ## Common mistakes

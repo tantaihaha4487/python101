@@ -1,10 +1,21 @@
 # Object-Oriented Programming
 
-OOP คือแนวคิดการจัดโค้ดรอบ ๆ สิ่งที่เรียกว่า object เหมาะเมื่อข้อมูลและพฤติกรรมเกี่ยวข้องกัน
+OOP คือแนวคิดการจัดโค้ดรอบ ๆ สิ่งที่เรียกว่า object
+
+ให้คิดว่า object คือ "สิ่งหนึ่งชิ้น" ที่มีทั้งข้อมูลและสิ่งที่ทำได้ เช่น นักเรียนมีชื่อกับคะแนน และสั่งให้แสดงข้อมูลหรือตรวจว่าผ่านได้
 
 ## Class และ Object
 
-Class คือแบบพิมพ์เขียว Object คือสิ่งที่สร้างจาก class
+Class คือแบบพิมพ์เขียว ส่วน object คือของจริงที่สร้างจากแบบพิมพ์เขียวนั้น
+
+| คำ | ความหมาย | ตัวอย่าง |
+| --- | --- | --- |
+| Class | แบบพิมพ์เขียว | `Student` |
+| Object | ของจริงที่สร้างจาก class | `mali`, `anan` |
+| Attribute | ข้อมูลของ object | `name`, `score` |
+| Method | สิ่งที่ object ทำได้ | `show_info()` |
+
+เริ่มจากตัวอย่างนักเรียน:
 
 ```python
 class Student:
@@ -13,43 +24,94 @@ class Student:
         self.score = score
 
     def show_info(self):
-        print(f"{self.name}: {self.score}")
+        print(f"{self.name} ได้ {self.score} คะแนน")
 
-student = Student("Mali", 90)
-student.show_info()
+    def is_passed(self):
+        return self.score >= 50
+
+mali = Student("Mali", 90)
+anan = Student("Anan", 45)
+
+mali.show_info()
+anan.show_info()
+
+print(mali.is_passed())
+print(anan.is_passed())
 ```
+
+ในตัวอย่างนี้ `mali` และ `anan` เป็น object คนละตัวกัน จึงเก็บ `name` และ `score` คนละชุดได้
 
 ## __init__
 
-`__init__` ทำงานตอนสร้าง object ใช้กำหนดค่าเริ่มต้น
+`__init__` ทำงานทันทีตอนสร้าง object ใช้กำหนดค่าเริ่มต้นให้ object
+
+```python
+mali = Student("Mali", 90)
+```
+
+บรรทัดนี้ส่งค่าเข้า `__init__` แบบนี้:
+
+| ค่าที่ส่งเข้าไป | parameter ที่รับ | เก็บไว้ใน object |
+| --- | --- | --- |
+| `"Mali"` | `name` | `self.name` |
+| `90` | `score` | `self.score` |
+
+ดังนั้น `mali.name` จะได้ `"Mali"` และ `mali.score` จะได้ `90`
 
 ## self
 
-`self` หมายถึง object ตัวปัจจุบัน ทำให้ method เข้าถึงข้อมูลของ object ได้
+`self` หมายถึง object ตัวปัจจุบันที่กำลังใช้งาน method นั้นอยู่
+
+เมื่อเขียน:
+
+```python
+mali.show_info()
+```
+
+Python จะมองเหมือนว่า `mali` ถูกส่งเข้าไปเป็น `self` ดังนั้นใน method จึงใช้ `self.name` และ `self.score` เพื่ออ่านข้อมูลของ `mali`
+
+ถ้าเขียน:
+
+```python
+anan.show_info()
+```
+
+`self` จะหมายถึง `anan` แทน
 
 ## Method
 
-Method คือ function ที่อยู่ใน class
+Method คือ function ที่อยู่ใน class ใช้ทำงานกับข้อมูลของ object
+
+ตัวอย่างนี้ `mark_done()` เปลี่ยนข้อมูลใน object จากยังไม่เสร็จเป็นเสร็จแล้ว:
 
 ```python
-class BankAccount:
-    def __init__(self, owner, balance):
-        self.owner = owner
-        self.balance = balance
+class TodoItem:
+    def __init__(self, title):
+        self.title = title
+        self.completed = False
 
-    def deposit(self, amount):
-        self.balance += amount
+    def mark_done(self):
+        self.completed = True
 
-    def withdraw(self, amount):
-        if amount <= self.balance:
-            self.balance -= amount
+    def show_status(self):
+        if self.completed:
+            print(f"{self.title}: เสร็จแล้ว")
         else:
-            print("เงินไม่พอ")
+            print(f"{self.title}: ยังไม่เสร็จ")
+
+task = TodoItem("ฝึกเขียน OOP")
+task.show_status()
+task.mark_done()
+task.show_status()
 ```
+
+สิ่งสำคัญคือ method ไม่ได้แค่แสดงผล แต่สามารถเปลี่ยนข้อมูลของ object ได้ เช่น `self.completed = True`
 
 ## ควรใช้ OOP เมื่อไร
 
-ใช้เมื่อสิ่งที่เขียนมีข้อมูลและพฤติกรรมร่วมกัน เช่น นักเรียน บัญชีธนาคาร สินค้า เกม หรือ task ใน todo app
+ใช้ OOP เมื่อมีข้อมูลหลายชิ้นที่เป็นชนิดเดียวกัน และแต่ละชิ้นมีพฤติกรรมของตัวเอง เช่น นักเรียนหลายคน บัญชีธนาคารหลายบัญชี สินค้าหลายชิ้น ตัวละครในเกม หรือ task หลายงานใน todo app
+
+ถ้าโปรแกรมมีแค่คำนวณค่าเดียวแล้วจบ function ธรรมดาอาจอ่านง่ายกว่า class
 
 ## ข้อผิดพลาดที่พบบ่อย
 

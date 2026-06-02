@@ -13,6 +13,13 @@ print(scores[0])
 print(len(scores))
 ```
 
+ผลลัพธ์:
+
+```text
+80
+4
+```
+
 ## Tuple
 
 Tuple คล้าย list แต่แก้ไขไม่ได้ เหมาะกับข้อมูลที่ไม่ควรเปลี่ยน
@@ -21,6 +28,8 @@ Tuple คล้าย list แต่แก้ไขไม่ได้ เหม�
 point = (10, 20)
 print(point[0])
 ```
+
+ผลลัพธ์คือ `10` เพราะ index เริ่มนับจาก 0
 
 ## Dictionary
 
@@ -35,6 +44,14 @@ student = {
 
 print(student["name"])
 student["age"] = 17
+print(student["age"])
+```
+
+ผลลัพธ์:
+
+```text
+Mali
+17
 ```
 
 ## Set
@@ -46,6 +63,12 @@ tags = {"python", "beginner", "python"}
 print(tags)
 ```
 
+คำว่า `"python"` ซ้ำกัน แต่ set จะเก็บไว้ครั้งเดียว ผลลัพธ์อาจเรียงลำดับไม่เหมือนกันทุกครั้ง เช่น:
+
+```text
+{'python', 'beginner'}
+```
+
 ## Slicing
 
 ```python
@@ -54,6 +77,16 @@ print(numbers[1:4])
 print(numbers[:3])
 print(numbers[-1])
 ```
+
+ผลลัพธ์:
+
+```text
+[20, 30, 40]
+[10, 20, 30]
+50
+```
+
+`numbers[1:4]` หมายถึงเริ่มที่ index 1 และหยุดก่อน index 4
 
 ## เลือกใช้อะไรดี
 
@@ -83,6 +116,8 @@ friends.append("Som")
 print(friends)
 ```
 
+ผลลัพธ์: `['Mali', 'Anan', 'Nok', 'Som']`
+
 ### เฉลยข้อ 2
 
 ใช้ dictionary เมื่อข้อมูลมีชื่อกำกับ เช่น `title`, `author`, `pages`
@@ -95,6 +130,8 @@ book = {
 }
 print(book["title"])
 ```
+
+ผลลัพธ์: `Python Adventure`
 
 ### เฉลยข้อ 3
 

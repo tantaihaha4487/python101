@@ -11,6 +11,8 @@ number = random.randint(1, 10)
 print(number)
 ```
 
+ผลลัพธ์จะเป็นเลขสุ่ม เช่น `7` ครั้งต่อไปอาจได้เลขอื่น
+
 ## import เฉพาะสิ่งที่ใช้
 
 ```python
@@ -18,6 +20,8 @@ from math import sqrt
 
 print(sqrt(16))
 ```
+
+ผลลัพธ์: `4.0`
 
 ## Built-in modules ที่ควรรู้
 
@@ -43,7 +47,11 @@ from helpers import add
 print(add(2, 3))
 ```
 
+ผลลัพธ์: `5`
+
 ## pip คืออะไร
+
+ส่วนนี้เป็นภาพรวมสำหรับบทต่อ ๆ ไป ตอนเริ่มต้นให้ใช้ built-in modules ก่อนก็พอ
 
 `pip` ใช้ติดตั้ง package จากภายนอก เช่น `requests`
 
@@ -53,7 +61,7 @@ python -m pip install requests
 
 ## Virtual environment
 
-Virtual environment ช่วยแยก dependencies ของแต่ละโปรเจกต์
+Virtual environment ช่วยแยก dependencies ของแต่ละโปรเจกต์ ถ้ายังเรียนพื้นฐานอยู่ ให้จำไว้ก่อนว่าเป็นเครื่องมือสำหรับโปรเจกต์จริง
 
 ```bash
 python -m venv .venv

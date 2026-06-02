@@ -41,6 +41,17 @@ finally:
 
 A traceback shows the file, line number, and error type. Start with the last line, then look at the file and line number mentioned above it.
 
+For example, if you write `print(age + 1)` when `age` is text:
+
+```text
+Traceback (most recent call last):
+  File "main.py", line 2, in <module>
+    print(age + 1)
+TypeError: can only concatenate str (not "int") to str
+```
+
+Read the last line first: `TypeError` says a string cannot be added to an integer. Then use `line 2` to find the code you need to fix.
+
 ## Common mistakes
 
 - Using a bare `except:` that hides all errors.

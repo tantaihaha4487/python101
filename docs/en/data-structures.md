@@ -13,6 +13,13 @@ print(scores[0])
 print(len(scores))
 ```
 
+Output:
+
+```text
+80
+4
+```
+
 ## Tuple
 
 A tuple is like a list, but it cannot be changed after creation.
@@ -21,6 +28,8 @@ A tuple is like a list, but it cannot be changed after creation.
 point = (10, 20)
 print(point[0])
 ```
+
+The output is `10` because indexes start at 0.
 
 ## Dictionary
 
@@ -35,6 +44,14 @@ student = {
 
 print(student["name"])
 student["age"] = 17
+print(student["age"])
+```
+
+Output:
+
+```text
+Mali
+17
 ```
 
 ## Set
@@ -46,6 +63,12 @@ tags = {"python", "beginner", "python"}
 print(tags)
 ```
 
+The word `"python"` appears twice, but a set keeps it once. Set order can change, so output may look like:
+
+```text
+{'python', 'beginner'}
+```
+
 ## Slicing
 
 ```python
@@ -54,6 +77,16 @@ print(numbers[1:4])
 print(numbers[:3])
 print(numbers[-1])
 ```
+
+Output:
+
+```text
+[20, 30, 40]
+[10, 20, 30]
+50
+```
+
+`numbers[1:4]` means start at index 1 and stop before index 4.
 
 ## Which one should you use?
 
@@ -83,6 +116,8 @@ friends.append("Som")
 print(friends)
 ```
 
+Output: `['Mali', 'Anan', 'Nok', 'Som']`
+
 ### Answer 2
 
 Use a dictionary when each value has a named key, such as `title`, `author`, and `pages`.
@@ -95,6 +130,8 @@ book = {
 }
 print(book["title"])
 ```
+
+Output: `Python Adventure`
 
 ### Answer 3
 

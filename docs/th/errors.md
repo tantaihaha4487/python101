@@ -41,6 +41,17 @@ finally:
 
 Traceback จะบอกไฟล์ บรรทัด และชนิด error ให้ดูจากบรรทัดล่างสุดก่อน แล้วค่อยย้อนขึ้นไปดูตำแหน่งในโค้ด
 
+ตัวอย่างเช่น ถ้าเขียน `print(age + 1)` โดยที่ `age` เป็นข้อความ:
+
+```text
+Traceback (most recent call last):
+  File "main.py", line 2, in <module>
+    print(age + 1)
+TypeError: can only concatenate str (not "int") to str
+```
+
+ให้อ่านบรรทัดล่างสุดก่อน: `TypeError` บอกว่าเราเอา string ไปบวกกับ int ไม่ได้ จากนั้นดู `line 2` เพื่อกลับไปแก้บรรทัดที่ผิด
+
 ## ข้อผิดพลาดที่พบบ่อย
 
 - ใช้ `except:` กว้างเกินไปจนไม่รู้ว่า error อะไร

@@ -11,6 +11,12 @@ def greet():
 greet()
 ```
 
+Output:
+
+```text
+Hello
+```
+
 ## Parameters
 
 ```python
@@ -19,6 +25,8 @@ def greet(name):
 
 greet("Mali")
 ```
+
+Output: `Hello Mali`
 
 ## Return values
 
@@ -31,6 +39,8 @@ print(result)
 ```
 
 Use `return` when another part of the program needs the result.
+
+When a function uses `return`, you can store the result in a variable such as `result`, then print it or use it in another calculation.
 
 ## Default arguments
 
@@ -76,7 +86,11 @@ Create a function that receives Celsius and `return`s Fahrenheit so the result c
 ```python
 def celsius_to_fahrenheit(celsius):
     return celsius * 9 / 5 + 32
+
+print(celsius_to_fahrenheit(0))
 ```
+
+Output: `32.0`
 
 ### Answer 2
 
@@ -85,7 +99,11 @@ Rectangle area is width multiplied by height.
 ```python
 def rectangle_area(width, height):
     return width * height
+
+print(rectangle_area(4, 5))
 ```
+
+Output: `20`
 
 ### Answer 3
 
@@ -95,14 +113,16 @@ An even number has a remainder of 0 when divided by 2.
 def is_even(number):
     return number % 2 == 0
 
-print(celsius_to_fahrenheit(0))
-print(celsius_to_fahrenheit(100))
-print(rectangle_area(4, 5))
 print(is_even(2))
 print(is_even(3))
 ```
 
-The test calls cover low/high temperatures and both even/odd numbers.
+Output:
+
+```text
+True
+False
+```
 
 </details>
 

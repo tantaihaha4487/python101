@@ -11,6 +11,12 @@ def greet():
 greet()
 ```
 
+ผลลัพธ์:
+
+```text
+สวัสดี
+```
+
 ## Parameters
 
 ```python
@@ -19,6 +25,8 @@ def greet(name):
 
 greet("Mali")
 ```
+
+ผลลัพธ์: `สวัสดี Mali`
 
 ## Return value
 
@@ -31,6 +39,8 @@ print(result)
 ```
 
 ใช้ `return` เมื่อ function ควรส่งค่ากลับไปให้ส่วนอื่นใช้ต่อ
+
+ถ้า function ใช้ `return` เราสามารถเก็บผลลัพธ์ไว้ในตัวแปร เช่น `result` แล้วนำไป `print()` หรือคำนวณต่อได้
 
 ## Default arguments
 
@@ -76,7 +86,11 @@ show_age()
 ```python
 def celsius_to_fahrenheit(celsius):
     return celsius * 9 / 5 + 32
+
+print(celsius_to_fahrenheit(0))
 ```
+
+ผลลัพธ์: `32.0`
 
 ### เฉลยข้อ 2
 
@@ -85,7 +99,11 @@ def celsius_to_fahrenheit(celsius):
 ```python
 def rectangle_area(width, height):
     return width * height
+
+print(rectangle_area(4, 5))
 ```
+
+ผลลัพธ์: `20`
 
 ### เฉลยข้อ 3
 
@@ -95,15 +113,16 @@ def rectangle_area(width, height):
 def is_even(number):
     return number % 2 == 0
 
-print(celsius_to_fahrenheit(0))
-print(celsius_to_fahrenheit(100))
-print(rectangle_area(4, 5))
 print(is_even(2))
 print(is_even(3))
 ```
 
-ตัวอย่างการทดสอบครอบคลุมทั้งอุณหภูมิต่ำ/สูง และเลขคู่/คี่
+ผลลัพธ์:
 
+```text
+True
+False
+```
 
 </details>
 

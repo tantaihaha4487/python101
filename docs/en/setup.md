@@ -54,12 +54,16 @@ The REPL lets you try Python one line at a time:
 python
 ```
 
-Try:
+The real screen uses `>>>` before each command:
 
-```python
-1 + 2
-print("test")
+```text
+>>> 1 + 2
+3
+>>> print("test")
+test
 ```
+
+`1 + 2` shows a result immediately in the REPL. In a `.py` file, use `print()` when you want to show something on screen.
 
 Exit with `exit()`.
 

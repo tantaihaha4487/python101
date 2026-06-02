@@ -11,6 +11,16 @@ for number in range(1, 6):
     print(number)
 ```
 
+ผลลัพธ์:
+
+```text
+1
+2
+3
+4
+5
+```
+
 `range(1, 6)` ได้เลข 1 ถึง 5 เพราะค่าสุดท้ายไม่รวม
 
 ## ภาพรวม for loop
@@ -39,6 +49,17 @@ while password != "python":
 print("เข้าสู่ระบบสำเร็จ")
 ```
 
+ตัวอย่างการรัน:
+
+```text
+รหัสผ่าน: 1234
+รหัสผ่าน: hello
+รหัสผ่าน: python
+เข้าสู่ระบบสำเร็จ
+```
+
+โปรแกรมถามซ้ำเพราะ `password != "python"` ยังเป็นจริง จนกว่าผู้ใช้จะพิมพ์ `python`
+
 ```mermaid
 flowchart TD
   A["เริ่ม while"] --> B{"เงื่อนไขเป็นจริงไหม?"}
@@ -59,6 +80,8 @@ for number in range(1, 10):
     print(number)
 ```
 
+ผลลัพธ์คือ `1` ถึง `4` เพราะ loop หยุดทันทีเมื่อ `number == 5`
+
 `continue` ข้ามรอบปัจจุบัน
 
 ```python
@@ -68,6 +91,8 @@ for number in range(1, 6):
     print(number)
 ```
 
+ผลลัพธ์คือ `1`, `2`, `4`, `5` เพราะรอบที่ `number == 3` ถูกข้าม
+
 ## Loop กับ list
 
 ```python
@@ -75,6 +100,14 @@ fruits = ["apple", "banana", "orange"]
 
 for fruit in fruits:
     print(f"I like {fruit}")
+```
+
+ผลลัพธ์:
+
+```text
+I like apple
+I like banana
+I like orange
 ```
 
 ## ข้อผิดพลาดที่พบบ่อย

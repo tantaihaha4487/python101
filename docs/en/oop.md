@@ -1,10 +1,21 @@
 # Object-Oriented Programming
 
-Object-oriented programming, or OOP, organizes code around objects. It is useful when data and behavior belong together.
+Object-oriented programming, or OOP, organizes code around objects.
+
+Think of an object as "one thing" that has both data and actions. For example, a student has a name and score, and can show their information or check whether they passed.
 
 ## Class and object
 
-A class is a blueprint. An object is something created from that blueprint.
+A class is a blueprint. An object is a real thing created from that blueprint.
+
+| Word | Meaning | Example |
+| --- | --- | --- |
+| Class | Blueprint | `Student` |
+| Object | Real thing created from a class | `mali`, `anan` |
+| Attribute | Data stored in an object | `name`, `score` |
+| Method | Action an object can do | `show_info()` |
+
+Start with a student example:
 
 ```python
 class Student:
@@ -13,43 +24,94 @@ class Student:
         self.score = score
 
     def show_info(self):
-        print(f"{self.name}: {self.score}")
+        print(f"{self.name} scored {self.score}")
 
-student = Student("Mali", 90)
-student.show_info()
+    def is_passed(self):
+        return self.score >= 50
+
+mali = Student("Mali", 90)
+anan = Student("Anan", 45)
+
+mali.show_info()
+anan.show_info()
+
+print(mali.is_passed())
+print(anan.is_passed())
 ```
+
+In this example, `mali` and `anan` are separate objects, so each one stores its own `name` and `score`.
 
 ## __init__
 
-`__init__` runs when an object is created. It sets initial values.
+`__init__` runs immediately when an object is created. It sets the starting values for that object.
+
+```python
+mali = Student("Mali", 90)
+```
+
+That line sends values into `__init__` like this:
+
+| Value passed in | Parameter | Stored on the object |
+| --- | --- | --- |
+| `"Mali"` | `name` | `self.name` |
+| `90` | `score` | `self.score` |
+
+So `mali.name` is `"Mali"`, and `mali.score` is `90`.
 
 ## self
 
-`self` means the current object. It lets methods access the object's data.
+`self` means the current object that is using the method.
+
+When you write:
+
+```python
+mali.show_info()
+```
+
+Python acts as if `mali` is passed into the method as `self`. Inside the method, `self.name` and `self.score` read data from `mali`.
+
+When you write:
+
+```python
+anan.show_info()
+```
+
+`self` means `anan` instead.
 
 ## Methods
 
-A method is a function inside a class.
+A method is a function inside a class. It works with the object's data.
+
+This example changes a todo item's data from not completed to completed:
 
 ```python
-class BankAccount:
-    def __init__(self, owner, balance):
-        self.owner = owner
-        self.balance = balance
+class TodoItem:
+    def __init__(self, title):
+        self.title = title
+        self.completed = False
 
-    def deposit(self, amount):
-        self.balance += amount
+    def mark_done(self):
+        self.completed = True
 
-    def withdraw(self, amount):
-        if amount <= self.balance:
-            self.balance -= amount
+    def show_status(self):
+        if self.completed:
+            print(f"{self.title}: done")
         else:
-            print("Not enough money")
+            print(f"{self.title}: not done")
+
+task = TodoItem("Practice OOP")
+task.show_status()
+task.mark_done()
+task.show_status()
 ```
+
+The key idea is that a method can do more than print. It can change the object's data, such as `self.completed = True`.
 
 ## When should you use OOP?
 
-Use OOP when a thing has both data and behavior, such as a student, bank account, product, game character, or todo item.
+Use OOP when you have many things of the same kind, and each thing has its own data and actions. Examples: many students, many bank accounts, many products, many game characters, or many todo items.
+
+If your program only calculates one value and stops, a normal function may be clearer than a class.
 
 ## Common mistakes
 

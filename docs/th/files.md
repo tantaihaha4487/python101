@@ -12,6 +12,8 @@ with open("note.txt", "w", encoding="utf-8") as file:
 
 โหมด `w` คือเขียนใหม่ ถ้าไฟล์มีอยู่เดิมจะถูกแทนที่
 
+หลังรันแล้วจะมีไฟล์ `note.txt` ที่มีข้อความ 2 บรรทัด
+
 ## อ่านไฟล์
 
 ```python
@@ -19,6 +21,13 @@ with open("note.txt", "r", encoding="utf-8") as file:
     content = file.read()
 
 print(content)
+```
+
+ผลลัพธ์:
+
+```text
+สวัสดี Python
+นี่คือไฟล์แรกของฉัน
 ```
 
 ## เพิ่มข้อมูลต่อท้าย
@@ -94,27 +103,45 @@ with open("notes.txt", "a", encoding="utf-8") as file:
 <details class="answer-reveal">
 <summary>ดูเฉลย Mini challenge</summary>
 
-ตัวอย่างนี้ครอบคลุมคำสั่ง `add`, `list`, `quit` และคำสั่งที่ไม่รู้จัก
+ตัวอย่างนี้ครอบคลุมคำสั่ง `add`, `list`, `quit`, คำสั่งที่ไม่รู้จัก และกรณีเปิดโปรแกรมครั้งแรกที่ยังไม่มี `todo.txt`
 
 ```python
-tasks = []
-
 while True:
     command = input("พิมพ์ add/list/quit: ")
 
     if command == "add":
         task = input("งานใหม่: ")
-        tasks.append(task)
         with open("todo.txt", "a", encoding="utf-8") as file:
             file.write(task + "\n")
+        print("บันทึกงานแล้ว")
     elif command == "list":
-        with open("todo.txt", "r", encoding="utf-8") as file:
-            for line in file:
+        try:
+            with open("todo.txt", "r", encoding="utf-8") as file:
+                lines = file.readlines()
+        except FileNotFoundError:
+            lines = []
+
+        if len(lines) == 0:
+            print("ยังไม่มีงาน")
+        else:
+            for line in lines:
                 print("- " + line.strip())
     elif command == "quit":
         break
     else:
         print("คำสั่งไม่ถูกต้อง")
+```
+
+ตัวอย่างการรัน:
+
+```text
+พิมพ์ add/list/quit: list
+ยังไม่มีงาน
+พิมพ์ add/list/quit: add
+งานใหม่: อ่านบท Functions
+บันทึกงานแล้ว
+พิมพ์ add/list/quit: list
+- อ่านบท Functions
 ```
 
 </details>

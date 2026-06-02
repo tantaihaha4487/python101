@@ -37,6 +37,17 @@ print(f"Multiply = {first * second}")
 print(f"Divide = {first / second}")
 ```
 
+Example run:
+
+```text
+First number: 10
+Second number: 2
+Add = 12.0
+Subtract = 8.0
+Multiply = 20.0
+Divide = 5.0
+```
+
 ## Format numbers
 
 ```python
@@ -45,6 +56,12 @@ print(f"Price: {price:.2f}")
 ```
 
 `:.2f` means show two decimal places.
+
+The output is:
+
+```text
+Price: 199.99
+```
 
 ## Common mistakes
 
@@ -110,6 +127,13 @@ celsius = float(input("Temperature in Celsius: "))
 fahrenheit = celsius * 9 / 5 + 32
 
 print(f"{celsius:.1f} C = {fahrenheit:.1f} F")
+```
+
+Example run:
+
+```text
+Temperature in Celsius: 25
+25.0 C = 77.0 F
 ```
 
 </details>
