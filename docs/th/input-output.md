@@ -58,9 +58,61 @@ print(f"ราคา {price:.2f} บาท")
 2. รับคะแนน 3 วิชา แล้วคำนวณค่าเฉลี่ย
 3. รับราคาสินค้าและเปอร์เซ็นต์ส่วนลด แล้วแสดงราคาสุทธิ
 
+<details class="answer-reveal">
+<summary>ดูเฉลยแบบฝึกหัด</summary>
+
+### เฉลยข้อ 1
+
+`input()` ได้ข้อความเสมอ จึงต้องใช้ `int()` ก่อนนำอายุไปบวกเลข
+
+```python
+name = input("ชื่อ: ")
+age = int(input("อายุ: "))
+print(f"อีก 10 ปี {name} จะอายุ {age + 10} ปี")
+```
+
+### เฉลยข้อ 2
+
+แปลงคะแนนเป็น `float` เพื่อรองรับคะแนนทศนิยม แล้วหารด้วยจำนวนวิชา
+
+```python
+score1 = float(input("คะแนนที่ 1: "))
+score2 = float(input("คะแนนที่ 2: "))
+score3 = float(input("คะแนนที่ 3: "))
+average = (score1 + score2 + score3) / 3
+print(f"คะแนนเฉลี่ยคือ {average:.2f}")
+```
+
+### เฉลยข้อ 3
+
+คำนวณส่วนลดจากเปอร์เซ็นต์ก่อน แล้วนำไปลบออกจากราคาตั้งต้น
+
+```python
+price = float(input("ราคาสินค้า: "))
+discount = float(input("ส่วนลด (%): "))
+final_price = price - (price * discount / 100)
+print(f"ราคาสุทธิ: {final_price:.2f} บาท")
+```
+
+</details>
+
 ## Mini challenge
 
 สร้างโปรแกรมแปลงอุณหภูมิจาก Celsius เป็น Fahrenheit ด้วยสูตร `F = C * 9 / 5 + 32`
+
+<details class="answer-reveal">
+<summary>ดูเฉลย Mini challenge</summary>
+
+สูตรนี้ต้องแปลงค่า input เป็น `float` เพื่อให้คำนวณกับทศนิยมได้
+
+```python
+celsius = float(input("อุณหภูมิ Celsius: "))
+fahrenheit = celsius * 9 / 5 + 32
+
+print(f"{celsius:.1f} C = {fahrenheit:.1f} F")
+```
+
+</details>
 
 ## สรุป
 

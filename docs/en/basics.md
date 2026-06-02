@@ -84,9 +84,58 @@ print(age + 1)
 2. Print them in a sentence using an f-string.
 3. Use `type()` on at least three values.
 
+<details class="answer-reveal">
+<summary>Show practice answer</summary>
+
+### Answer 1
+
+Create all variables from the prompt: name, age, school, and favorite subject.
+
+```python
+name = "Mali"
+age = 16
+school = "Python School"
+favorite_subject = "art"
+```
+
+### Answer 2
+
+Use an f-string to combine the variable values into one sentence.
+
+```python
+print(f"{name} is {age} years old, studies at {school}, and likes {favorite_subject}.")
+```
+
+### Answer 3
+
+Use `type()` to inspect at least three values.
+
+```python
+print(type(name))
+print(type(age))
+print(type(favorite_subject))
+```
+
+</details>
+
 ## Mini challenge
 
 Write a program that calculates your age five years from now and prints a sentence.
+
+<details class="answer-reveal">
+<summary>Show mini challenge answer</summary>
+
+Store the current age, calculate a new value, then print it in a sentence.
+
+```python
+name = "Mali"
+age = 16
+future_age = age + 5
+
+print(f"In 5 years, {name} will be {future_age} years old.")
+```
+
+</details>
 
 ## Summary
 

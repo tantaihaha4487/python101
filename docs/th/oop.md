@@ -63,9 +63,98 @@ class BankAccount:
 2. สร้าง class `TodoItem` ที่มี title และ completed
 3. เพิ่ม method สำหรับเปลี่ยนสถานะ todo เป็นเสร็จแล้ว
 
+<details class="answer-reveal">
+<summary>ดูเฉลยแบบฝึกหัด</summary>
+
+### เฉลยข้อ 1
+
+`Book` เก็บข้อมูลหนังสือ 2 อย่างคือ `title` และ `author`
+
+```python
+class Book:
+    def __init__(self, title, author):
+        self.title = title
+        self.author = author
+```
+
+### เฉลยข้อ 2
+
+`TodoItem` เก็บชื่องานและเริ่มสถานะ `completed` เป็น `False`
+
+```python
+class TodoItem:
+    def __init__(self, title):
+        self.title = title
+        self.completed = False
+
+    def mark_done(self):
+        self.completed = True
+```
+
+### เฉลยข้อ 3
+
+method `mark_done()` เปลี่ยนสถานะ todo จาก `False` เป็น `True`
+
+```python
+todo = TodoItem("ฝึกเขียน class")
+print(todo.completed)
+todo.mark_done()
+print(todo.completed)
+```
+
+### ตัวอย่างทดสอบ
+
+ทดสอบการสร้าง object ของ `Book`
+
+```python
+book = Book("Python Basics", "Thanachot P.")
+print(book.title)
+print(book.author)
+```
+
+</details>
+
 ## Mini challenge
 
 สร้าง class `BankAccount` ที่ฝาก ถอน และแสดงยอดเงินได้ พร้อมตรวจว่ายอดถอนต้องไม่เกินยอดเงิน
+
+<details class="answer-reveal">
+<summary>ดูเฉลย Mini challenge</summary>
+
+ตัวอย่างนี้ครอบคลุมฝากเงินปกติ ถอนเงินปกติ ถอนเกินยอด และฝาก/ถอนยอดที่ไม่ถูกต้อง
+
+```python
+class BankAccount:
+    def __init__(self, owner, balance=0):
+        self.owner = owner
+        self.balance = balance
+
+    def deposit(self, amount):
+        if amount <= 0:
+            print("ยอดฝากต้องมากกว่า 0")
+            return
+        self.balance += amount
+
+    def withdraw(self, amount):
+        if amount <= 0:
+            print("ยอดถอนต้องมากกว่า 0")
+        elif amount > self.balance:
+            print("ยอดเงินไม่พอ")
+        else:
+            self.balance -= amount
+
+    def show_balance(self):
+        print(f"{self.owner} มียอดเงิน {self.balance} บาท")
+
+account = BankAccount("Mali", 100)
+account.deposit(50)
+account.withdraw(30)
+account.withdraw(500)
+account.withdraw(0)
+account.show_balance()
+```
+
+</details>
 
 ## สรุป
 

@@ -70,9 +70,72 @@ print(numbers[-1])
 2. Create a dictionary for one book.
 3. Ask for several words and use a set to find unique words.
 
+<details class="answer-reveal">
+<summary>Show practice answer</summary>
+
+### Answer 1
+
+Use a list when the data is an ordered collection that can grow.
+
+```python
+friends = ["Mali", "Anan", "Nok"]
+friends.append("Som")
+print(friends)
+```
+
+### Answer 2
+
+Use a dictionary when each value has a named key, such as `title`, `author`, and `pages`.
+
+```python
+book = {
+    "title": "Python Adventure",
+    "author": "Mali",
+    "pages": 120
+}
+print(book["title"])
+```
+
+### Answer 3
+
+Collect all words in a list first, then convert to a set to remove duplicates.
+
+```python
+words = []
+for round_number in range(5):
+    words.append(input("Type a word: "))
+
+unique_words = set(words)
+print(unique_words)
+```
+
+</details>
+
 ## Mini challenge
 
 Create a simple contact book using a dictionary for names and phone numbers.
+
+<details class="answer-reveal">
+<summary>Show mini challenge answer</summary>
+
+Use a dictionary because the contact name can be the key and the phone number can be the value. This covers both finding an existing name and adding a new one.
+
+```python
+contacts = {
+    "Mali": "080-111-1111",
+    "Anan": "080-222-2222"
+}
+
+name = input("Find a name: ")
+if name in contacts:
+    print(f"{name}'s phone: {contacts[name]}")
+else:
+    phone = input("No phone yet. Add one: ")
+    contacts[name] = phone
+    print(contacts)
+```
+
+</details>
 
 ## Summary
 

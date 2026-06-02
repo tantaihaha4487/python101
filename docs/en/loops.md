@@ -89,9 +89,69 @@ for fruit in fruits:
 2. Print even numbers from 2 to 50.
 3. Ask for five numbers and calculate the total.
 
+<details class="answer-reveal">
+<summary>Show practice answer</summary>
+
+### Answer 1
+
+Use `range(1, 21)` because the ending number is not included.
+
+```python
+for number in range(1, 21):
+    print(number)
+```
+
+### Answer 2
+
+Use a step of `2` to skip from one even number to the next.
+
+```python
+for number in range(2, 51, 2):
+    print(number)
+```
+
+### Answer 3
+
+Start `total` at 0, then add each input value during the loop.
+
+```python
+total = 0
+for round_number in range(1, 6):
+    score = int(input(f"Number {round_number}: "))
+    total += score
+
+print(f"Total score: {total}")
+```
+
+</details>
+
 ## Mini challenge
 
 Create a number guessing game where the user keeps guessing until correct.
+
+<details class="answer-reveal">
+<summary>Show mini challenge answer</summary>
+
+Use `while True` to keep guessing, then `break` when the answer is correct.
+
+```python
+secret = 7
+attempts = 0
+
+while True:
+    guess = int(input("Guess the secret number 1-10: "))
+    attempts += 1
+
+    if guess == secret:
+        print(f"Correct! Attempts: {attempts}")
+        break
+    if guess < secret:
+        print("Too low")
+    else:
+        print("Too high")
+```
+
+</details>
 
 ## Summary
 

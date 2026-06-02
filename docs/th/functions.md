@@ -66,9 +66,90 @@ show_age()
 2. สร้าง function คำนวณพื้นที่สี่เหลี่ยม
 3. สร้าง function ตรวจว่าเลขเป็นคู่หรือคี่
 
+<details class="answer-reveal">
+<summary>ดูเฉลยแบบฝึกหัด</summary>
+
+### เฉลยข้อ 1
+
+สร้าง function ที่รับค่า Celsius แล้ว `return` ค่า Fahrenheit เพื่อเอาผลลัพธ์ไปใช้ต่อได้
+
+```python
+def celsius_to_fahrenheit(celsius):
+    return celsius * 9 / 5 + 32
+```
+
+### เฉลยข้อ 2
+
+พื้นที่สี่เหลี่ยมคือความกว้างคูณความสูง
+
+```python
+def rectangle_area(width, height):
+    return width * height
+```
+
+### เฉลยข้อ 3
+
+เลขคู่คือเลขที่หาร 2 แล้วเศษเป็น 0
+
+```python
+def is_even(number):
+    return number % 2 == 0
+
+print(celsius_to_fahrenheit(0))
+print(celsius_to_fahrenheit(100))
+print(rectangle_area(4, 5))
+print(is_even(2))
+print(is_even(3))
+```
+
+ตัวอย่างการทดสอบครอบคลุมทั้งอุณหภูมิต่ำ/สูง และเลขคู่/คี่
+
+
+</details>
+
 ## Mini challenge
 
 แยกโปรแกรม calculator ให้แต่ละ operation เป็น function เช่น `add`, `subtract`, `multiply`, `divide`
+
+<details class="answer-reveal">
+<summary>ดูเฉลย Mini challenge</summary>
+
+แยกแต่ละเครื่องหมายเป็น function แล้วใช้ `if/elif/else` เพื่อครอบคลุม `+`, `-`, `*`, `/`, การหารด้วยศูนย์ และเครื่องหมายที่ไม่รู้จัก
+
+```python
+def add(a, b):
+    return a + b
+
+def subtract(a, b):
+    return a - b
+
+def multiply(a, b):
+    return a * b
+
+def divide(a, b):
+    if b == 0:
+        return "หารด้วยศูนย์ไม่ได้"
+    return a / b
+
+first = float(input("เลขตัวแรก: "))
+operator = input("เครื่องหมาย (+ - * /): ")
+second = float(input("เลขตัวที่สอง: "))
+
+if operator == "+":
+    result = add(first, second)
+elif operator == "-":
+    result = subtract(first, second)
+elif operator == "*":
+    result = multiply(first, second)
+elif operator == "/":
+    result = divide(first, second)
+else:
+    result = "ไม่รู้จักเครื่องหมายนี้"
+
+print(result)
+```
+
+</details>
 
 ## สรุป
 

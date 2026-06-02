@@ -76,9 +76,77 @@ if is_admin or is_owner:
 2. รับคะแนนแล้วแสดงเกรด A-F
 3. รับ username/password แล้วตรวจว่าเข้าสู่ระบบได้หรือไม่
 
+<details class="answer-reveal">
+<summary>ดูเฉลยแบบฝึกหัด</summary>
+
+### เฉลยข้อ 1
+
+เรียงเงื่อนไขจากช่วงอายุน้อยไปมาก เพื่อให้เด็ก วัยรุ่น และผู้ใหญ่ถูกแยกครบทุกกรณี
+
+```python
+age = int(input("อายุ: "))
+if age < 13:
+    print("เด็ก")
+elif age < 20:
+    print("วัยรุ่น")
+else:
+    print("ผู้ใหญ่")
+```
+
+### เฉลยข้อ 2
+
+เช็กเกรดจากคะแนนสูงลงมาต่ำ เพื่อไม่ให้คะแนนสูงถูกจับในเงื่อนไขกว้างเกินไปก่อน
+
+```python
+score = int(input("คะแนน: "))
+if score >= 80:
+    print("A")
+elif score >= 70:
+    print("B")
+elif score >= 60:
+    print("C")
+elif score >= 50:
+    print("D")
+else:
+    print("F")
+```
+
+### เฉลยข้อ 3
+
+ต้องให้ทั้ง username และ password ถูกต้องพร้อมกัน จึงใช้ `and`
+
+```python
+username = input("username: ")
+password = input("password: ")
+if username == "admin" and password == "1234":
+    print("เข้าสู่ระบบได้")
+else:
+    print("username หรือ password ไม่ถูกต้อง")
+```
+
+</details>
+
 ## Mini challenge
 
 สร้างโปรแกรมแนะนำเสื้อผ้าจากอุณหภูมิ เช่น หนาว เย็น ร้อน
+
+<details class="answer-reveal">
+<summary>ดูเฉลย Mini challenge</summary>
+
+ตัวอย่างนี้ครอบคลุม 3 ช่วงอุณหภูมิ: หนาว เย็น และร้อน
+
+```python
+temperature = float(input("อุณหภูมิวันนี้: "))
+
+if temperature < 18:
+    print("หนาว: ใส่เสื้อกันหนาว")
+elif temperature < 28:
+    print("เย็น: ใส่เสื้อแขนยาวบาง ๆ")
+else:
+    print("ร้อน: ใส่เสื้อยืดสบาย ๆ และพกน้ำ")
+```
+
+</details>
 
 ## สรุป
 

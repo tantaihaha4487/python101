@@ -75,6 +75,35 @@ Exit with `exit()`.
 2. Print your name, age, and what you want to build with Python.
 3. Run the file from the terminal.
 
+<details class="answer-reveal">
+<summary>Show answer</summary>
+
+This answer covers all three tasks: create `intro.py`, use multiple `print()` lines, and run it from the terminal.
+
+### Answer 1
+
+Create a file named `intro.py`.
+
+### Answer 2
+
+Put this code in the file to print your name, age, and what you want to build.
+
+```python
+print("Name: Mali")
+print("Age: 16")
+print("I want to build: a task tracker")
+```
+
+### Answer 3
+
+Run it with:
+
+```bash
+python intro.py
+```
+
+</details>
+
 ## Summary
 
 You should now be able to install Python, run a `.py` file, and understand the difference between running a file and using the REPL.

@@ -58,9 +58,61 @@ print(f"Price: {price:.2f}")
 2. Ask for three scores and calculate the average.
 3. Ask for a price and discount percentage, then calculate the final price.
 
+<details class="answer-reveal">
+<summary>Show practice answer</summary>
+
+### Answer 1
+
+`input()` returns text, so convert the age with `int()` before adding 10.
+
+```python
+name = input("Name: ")
+age = int(input("Age: "))
+print(f"In 10 years, {name} will be {age + 10} years old.")
+```
+
+### Answer 2
+
+Use `float()` so decimal scores work, then divide by the number of subjects.
+
+```python
+score1 = float(input("Score 1: "))
+score2 = float(input("Score 2: "))
+score3 = float(input("Score 3: "))
+average = (score1 + score2 + score3) / 3
+print(f"Average score: {average:.2f}")
+```
+
+### Answer 3
+
+Calculate the discount amount first, then subtract it from the original price.
+
+```python
+price = float(input("Item price: "))
+discount = float(input("Discount (%): "))
+final_price = price - (price * discount / 100)
+print(f"Final price: {final_price:.2f}")
+```
+
+</details>
+
 ## Mini challenge
 
 Create a Celsius to Fahrenheit converter using `F = C * 9 / 5 + 32`.
+
+<details class="answer-reveal">
+<summary>Show mini challenge answer</summary>
+
+Convert the input to `float` so decimal temperatures also work.
+
+```python
+celsius = float(input("Temperature in Celsius: "))
+fahrenheit = celsius * 9 / 5 + 32
+
+print(f"{celsius:.1f} C = {fahrenheit:.1f} F")
+```
+
+</details>
 
 ## Summary
 

@@ -52,9 +52,72 @@ with open("note.txt", "r", encoding="utf-8") as file:
 2. Read a file and count the lines.
 3. Create a notes app that appends new notes.
 
+<details class="answer-reveal">
+<summary>Show practice answer</summary>
+
+### Answer 1
+
+Use `w` mode to create or replace a file that stores the user's name.
+
+```python
+name = input("User name: ")
+with open("user.txt", "w", encoding="utf-8") as file:
+    file.write(name + "\n")
+```
+
+### Answer 2
+
+Read the file with `readlines()`, then use `len()` to count lines.
+
+```python
+with open("user.txt", "r", encoding="utf-8") as file:
+    lines = file.readlines()
+print(f"The file has {len(lines)} lines")
+```
+
+### Answer 3
+
+Use `a` mode to append a new note without deleting old notes.
+
+```python
+note = input("New note: ")
+with open("notes.txt", "a", encoding="utf-8") as file:
+    file.write(note + "\n")
+```
+
+</details>
+
 ## Mini challenge
 
 Create a text-file todo app that can add tasks, show all tasks, and save them to `todo.txt`.
+
+<details class="answer-reveal">
+<summary>Show mini challenge answer</summary>
+
+This example covers the `add`, `list`, `quit`, and unknown-command cases.
+
+```python
+tasks = []
+
+while True:
+    command = input("Type add/list/quit: ")
+
+    if command == "add":
+        task = input("New task: ")
+        tasks.append(task)
+        with open("todo.txt", "a", encoding="utf-8") as file:
+            file.write(task + "\n")
+    elif command == "list":
+        with open("todo.txt", "r", encoding="utf-8") as file:
+            for line in file:
+                print("- " + line.strip())
+    elif command == "quit":
+        break
+    else:
+        print("Unknown command")
+```
+
+</details>
 
 ## Summary
 

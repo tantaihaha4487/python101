@@ -53,9 +53,82 @@ A traceback shows the file, line number, and error type. Start with the last lin
 2. Read a file and show a clear message if it does not exist.
 3. Create a calculator that handles division by zero.
 
+<details class="answer-reveal">
+<summary>Show practice answer</summary>
+
+### Answer 1
+
+Use `try/except ValueError` to cover the case where the user types letters instead of a number.
+
+```python
+try:
+    number = int(input("Enter a number: "))
+    print(f"The number is {number}")
+except ValueError:
+    print("Please enter digits only")
+```
+
+### Answer 2
+
+Use `except FileNotFoundError` to show a clear message when the file does not exist.
+
+```python
+try:
+    with open("data.txt", "r", encoding="utf-8") as file:
+        print(file.read())
+except FileNotFoundError:
+    print("data.txt was not found")
+```
+
+### Answer 3
+
+Separate `ValueError` for non-numeric input and `ZeroDivisionError` for division by zero.
+
+```python
+try:
+    first = float(input("First number: "))
+    second = float(input("Second number: "))
+    print(first / second)
+except ValueError:
+    print("Please enter numbers")
+except ZeroDivisionError:
+    print("Cannot divide by zero")
+```
+
+</details>
+
 ## Mini challenge
 
 Improve your number guessing game so it does not crash when the user types letters.
+
+<details class="answer-reveal">
+<summary>Show mini challenge answer</summary>
+
+Use `continue` after invalid input so the program asks again without counting it as an attempt.
+
+```python
+secret = 7
+attempts = 0
+
+while True:
+    try:
+        guess = int(input("Guess 1-10: "))
+    except ValueError:
+        print("Please enter a number")
+        continue
+
+    attempts += 1
+
+    if guess == secret:
+        print(f"Correct! Attempts: {attempts}")
+        break
+    if guess < secret:
+        print("Too low")
+    else:
+        print("Too high")
+```
+
+</details>
 
 ## Summary
 

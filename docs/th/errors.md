@@ -53,9 +53,82 @@ Traceback จะบอกไฟล์ บรรทัด และชนิด e
 2. อ่านไฟล์และแสดงข้อความถ้าไฟล์ไม่มี
 3. สร้าง calculator ที่ตรวจหารด้วยศูนย์
 
+<details class="answer-reveal">
+<summary>ดูเฉลยแบบฝึกหัด</summary>
+
+### เฉลยข้อ 1
+
+ใช้ `try/except ValueError` เพื่อครอบคลุมกรณีผู้ใช้กรอกตัวอักษรแทนตัวเลข
+
+```python
+try:
+    number = int(input("กรอกตัวเลข: "))
+    print(f"ตัวเลขคือ {number}")
+except ValueError:
+    print("กรุณากรอกเป็นตัวเลขเท่านั้น")
+```
+
+### เฉลยข้อ 2
+
+ใช้ `except FileNotFoundError` เพื่อบอกผู้ใช้เมื่อไฟล์ไม่มีอยู่จริง
+
+```python
+try:
+    with open("data.txt", "r", encoding="utf-8") as file:
+        print(file.read())
+except FileNotFoundError:
+    print("ไม่พบไฟล์ data.txt")
+```
+
+### เฉลยข้อ 3
+
+แยก `ValueError` สำหรับข้อมูลที่ไม่ใช่เลข และ `ZeroDivisionError` สำหรับหารด้วยศูนย์
+
+```python
+try:
+    first = float(input("เลขตัวแรก: "))
+    second = float(input("เลขตัวที่สอง: "))
+    print(first / second)
+except ValueError:
+    print("กรุณากรอกตัวเลข")
+except ZeroDivisionError:
+    print("หารด้วยศูนย์ไม่ได้")
+```
+
+</details>
+
 ## Mini challenge
 
 ปรับเกมทายเลขให้ไม่พังเมื่อผู้ใช้กรอกตัวอักษรแทนตัวเลข
+
+<details class="answer-reveal">
+<summary>ดูเฉลย Mini challenge</summary>
+
+ใช้ `continue` หลังกรอกผิด เพื่อกลับไปรับข้อมูลใหม่โดยไม่นับเป็นจำนวนครั้งที่ทาย
+
+```python
+secret = 7
+attempts = 0
+
+while True:
+    try:
+        guess = int(input("ทายเลข 1-10: "))
+    except ValueError:
+        print("กรุณากรอกตัวเลข")
+        continue
+
+    attempts += 1
+
+    if guess == secret:
+        print(f"ถูกต้อง ใช้ {attempts} ครั้ง")
+        break
+    if guess < secret:
+        print("น้อยไป")
+    else:
+        print("มากไป")
+```
+
+</details>
 
 ## สรุป
 

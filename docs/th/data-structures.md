@@ -70,9 +70,72 @@ print(numbers[-1])
 2. สร้าง dictionary เก็บข้อมูลหนังสือ 1 เล่ม
 3. รับคำจากผู้ใช้หลายคำ แล้วใช้ set หาคำที่ไม่ซ้ำ
 
+<details class="answer-reveal">
+<summary>ดูเฉลยแบบฝึกหัด</summary>
+
+### เฉลยข้อ 1
+
+ใช้ list เมื่อข้อมูลเป็นรายการที่เพิ่มลำดับใหม่ได้
+
+```python
+friends = ["Mali", "Anan", "Nok"]
+friends.append("Som")
+print(friends)
+```
+
+### เฉลยข้อ 2
+
+ใช้ dictionary เมื่อข้อมูลมีชื่อกำกับ เช่น `title`, `author`, `pages`
+
+```python
+book = {
+    "title": "Python Adventure",
+    "author": "Mali",
+    "pages": 120
+}
+print(book["title"])
+```
+
+### เฉลยข้อ 3
+
+เก็บคำทั้งหมดใน list ก่อน แล้วแปลงเป็น set เพื่อตัดค่าที่ซ้ำออก
+
+```python
+words = []
+for round_number in range(5):
+    words.append(input("พิมพ์คำ: "))
+
+unique_words = set(words)
+print(unique_words)
+```
+
+</details>
+
 ## Mini challenge
 
 สร้างโปรแกรม contact book แบบง่าย เก็บชื่อและเบอร์โทรใน dictionary
+
+<details class="answer-reveal">
+<summary>ดูเฉลย Mini challenge</summary>
+
+ใช้ dictionary เพราะชื่อสามารถเป็น key และเบอร์โทรเป็น value ได้ ตัวอย่างนี้ครอบคลุมทั้งกรณีเจอชื่อเดิมและเพิ่มชื่อใหม่
+
+```python
+contacts = {
+    "Mali": "080-111-1111",
+    "Anan": "080-222-2222"
+}
+
+name = input("ค้นหาชื่อ: ")
+if name in contacts:
+    print(f"เบอร์ของ {name}: {contacts[name]}")
+else:
+    phone = input("ยังไม่มีเบอร์นี้ เพิ่มเบอร์ใหม่: ")
+    contacts[name] = phone
+    print(contacts)
+```
+
+</details>
 
 ## สรุป
 

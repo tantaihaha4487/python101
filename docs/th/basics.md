@@ -86,9 +86,59 @@ print(age + 1)
 2. แสดงผลเป็นประโยคด้วย f-string
 3. ใช้ `type()` ตรวจชนิดข้อมูลอย่างน้อย 3 ค่า
 
+<details class="answer-reveal">
+<summary>ดูเฉลยแบบฝึกหัด</summary>
+
+### เฉลยข้อ 1
+
+สร้างตัวแปรให้ครบตามโจทย์: ชื่อ อายุ โรงเรียน และวิชาที่ชอบ
+
+```python
+name = "Mali"
+age = 16
+school = "Python School"
+favorite_subject = "ศิลปะ"
+```
+
+### เฉลยข้อ 2
+
+ใช้ f-string รวมค่าจากตัวแปรเป็นประโยคเดียว
+
+```python
+print(f"{name} อายุ {age} ปี เรียนที่ {school} และชอบวิชา{favorite_subject}")
+```
+
+
+### เฉลยข้อ 3
+
+ใช้ `type()` เพื่อตรวจชนิดข้อมูลของค่าอย่างน้อย 3 ค่า
+
+```python
+print(type(name))
+print(type(age))
+print(type(favorite_subject))
+```
+
+</details>
+
 ## Mini challenge
 
 เขียนโปรแกรมคำนวณอายุในอีก 5 ปีข้างหน้า แล้วแสดงผลเป็นประโยค
+
+<details class="answer-reveal">
+<summary>ดูเฉลย Mini challenge</summary>
+
+เก็บอายุปัจจุบันไว้ในตัวแปร แล้วสร้างตัวแปรใหม่สำหรับอายุในอีก 5 ปี
+
+```python
+name = "Mali"
+age = 16
+future_age = age + 5
+
+print(f"อีก 5 ปี {name} จะอายุ {future_age} ปี")
+```
+
+</details>
 
 ## สรุป
 

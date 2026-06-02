@@ -89,9 +89,69 @@ for fruit in fruits:
 2. แสดงเฉพาะเลขคู่ 2 ถึง 50
 3. รับตัวเลข 5 ตัว แล้วหาผลรวม
 
+<details class="answer-reveal">
+<summary>ดูเฉลยแบบฝึกหัด</summary>
+
+### เฉลยข้อ 1
+
+`range(1, 21)` ต้องใช้ 21 เพราะเลขสุดท้ายไม่ถูกรวม
+
+```python
+for number in range(1, 21):
+    print(number)
+```
+
+### เฉลยข้อ 2
+
+ใช้ step เป็น `2` เพื่อข้ามทีละสองเลขและได้เฉพาะเลขคู่
+
+```python
+for number in range(2, 51, 2):
+    print(number)
+```
+
+### เฉลยข้อ 3
+
+เริ่ม `total` ที่ 0 แล้วบวกค่าที่รับเข้ามาทีละรอบ
+
+```python
+total = 0
+for round_number in range(1, 6):
+    score = int(input(f"ตัวเลขที่ {round_number}: "))
+    total += score
+
+print(f"คะแนนรวมคือ {total}")
+```
+
+</details>
+
 ## Mini challenge
 
 สร้างเกมทายเลข โดยให้ผู้ใช้ทายจนถูก แล้วบอกจำนวนครั้งที่ทาย
+
+<details class="answer-reveal">
+<summary>ดูเฉลย Mini challenge</summary>
+
+ใช้ `while True` เพื่อให้ทายซ้ำจนกว่าจะถูก แล้ว `break` เพื่อจบเกม
+
+```python
+secret = 7
+attempts = 0
+
+while True:
+    guess = int(input("ทายเลขลับ 1-10: "))
+    attempts += 1
+
+    if guess == secret:
+        print(f"ถูกต้อง ใช้ {attempts} ครั้ง")
+        break
+    if guess < secret:
+        print("น้อยไป")
+    else:
+        print("มากไป")
+```
+
+</details>
 
 ## สรุป
 
