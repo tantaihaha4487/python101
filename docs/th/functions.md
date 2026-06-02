@@ -91,7 +91,7 @@ show_age()
 
 1. สร้าง function `celsius_to_fahrenheit(celsius)` ที่รับองศา Celsius แล้ว `return` ค่า Fahrenheit จากนั้นทดสอบด้วย `0`
 2. สร้าง function `rectangle_area(width, height)` ที่รับความกว้างและความสูง แล้ว `return` พื้นที่ จากนั้นทดสอบด้วย 4 และ 5
-3. สร้าง function `is_even(number)` ที่รับเลข 1 ค่า แล้ว `return` `True` ถ้าเลขเป็นคู่ และ `False` ถ้าเลขเป็นคี่ จากนั้นทดสอบด้วย 2 และ 3
+3. สร้าง function `is_even(number)` ที่รับเลข 1 ตัว แล้ว `return` `True` ถ้าเลขเป็นคู่ และ `False` ถ้าเลขเป็นคี่ จากนั้นทดสอบด้วย 2 และ 3 เพื่อดูผลลัพธ์ `True` และ `False`
 
 <details class="answer-reveal">
 <summary>ดูเฉลยแบบฝึกหัด</summary>

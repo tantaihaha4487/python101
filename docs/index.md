@@ -3,50 +3,58 @@ layout: home
 
 hero:
   name: Python101
-  text: เรียน Python แบบเป็นขั้นตอน / Learn Python step by step
-  tagline: คอร์ส Python สำหรับผู้เริ่มต้นจริง ภาษาไทยก่อน แล้วตามด้วยภาษาอังกฤษแบบละเอียดเท่ากัน
+  text: คอร์ส Python สำหรับผู้เริ่มต้นจริง / A real beginner Python course
+  tagline: เรียนจากศูนย์แบบลงมือพิมพ์โค้ด ภาษาไทยก่อน แล้วตามด้วยภาษาอังกฤษแบบละเอียดเท่ากัน
   actions:
     - theme: brand
-      text: เริ่มเรียนภาษาไทยก่อน
+      text: เริ่มเรียนภาษาไทย
       link: /th/
     - theme: alt
-      text: Start the English track
+      text: Start with English
       link: /en/
     - theme: alt
       text: ดูโปรเจกต์ฝึกทำ
       link: /th/projects
 
 features:
-  - title: Zero To First Program
-    details: เริ่มจากติดตั้ง Python, เปิด terminal, สร้างไฟล์ .py และรันโปรแกรมแรกโดยไม่ข้ามพื้นฐานสำคัญ
-  - title: Thai First, English Next
-    details: เรียนภาษาไทยก่อนเพื่อเข้าใจแนวคิด จากนั้นมีบทภาษาอังกฤษที่ละเอียดเท่ากันสำหรับทบทวนคำศัพท์สายโปรแกรมมิ่ง
-  - title: Learn By Doing
-    details: ทุกบทมีตัวอย่างโค้ด ข้อผิดพลาดที่พบบ่อย แบบฝึกหัด mini challenge และโปรเจกต์สำหรับฝึกจริง
+  - title: เริ่มจากศูนย์จริง
+    details: เริ่มตั้งแต่ติดตั้ง Python เปิด terminal สร้างไฟล์ .py และรันโปรแกรมแรกทีละขั้น
+  - title: ไทยก่อน อังกฤษเท่ากัน
+    details: อธิบายแนวคิดเป็นภาษาไทยก่อน แล้วมีบทภาษาอังกฤษที่ละเอียดพอ ๆ กันสำหรับอ่านทบทวนและจำศัพท์สายโปรแกรมมิ่ง
+  - title: เรียนด้วยการลงมือพิมพ์
+    details: ทุกบทมีตัวอย่างโค้ด ผลลัพธ์ แบบฝึกหัด mini challenge และโปรเจกต์สำหรับฝึกจริง
 ---
 
 ## คอร์สนี้เหมาะกับใคร
 
-Python101 เหมาะกับผู้เรียนที่ยังไม่เคยเขียนโปรแกรม หรือเคยลองแล้วแต่ยังไม่เข้าใจภาพรวม คอร์สนี้เน้นการอธิบายแบบช้า ชัด และต่อเนื่องจากเรื่องเล็กไปหาโปรเจกต์จริง
+Python101 เหมาะกับคนที่อยากเริ่มเขียนโปรแกรมจริง ไม่ใช่อ่านแค่ทฤษฎีอย่างเดียว ถ้าคุณยังไม่เคยเขียนโค้ดมาก่อน หรือเคยลองแล้วแต่ยังไม่ต่อภาพรวมได้ คอร์สนี้จะพาเริ่มจากเรื่องง่ายไปหาโปรเจกต์จริงแบบช้า ชัด และตามทันได้
 
-You can also use this site if you already know a little Python but want a structured review with Thai and English explanations side by side.
+Python101 is for learners who want to code for real, not just read theory. If you have never written code before, or you have tried Python but still want the big picture, this course starts small and builds toward real projects step by step.
 
 ## เริ่มตรงไหนดี
 
-| ถ้าคุณต้องการ | ไปที่ |
+| เป้าหมาย | ไปที่ |
 | --- | --- |
-| เรียนจากศูนย์เป็นภาษาไทย | [Python101 ภาษาไทย](/th/) |
+| เริ่มจากศูนย์เป็นภาษาไทย | [Python101 ภาษาไทย](/th/) |
 | เรียนหรือทบทวนเป็นภาษาอังกฤษ | [Python101 English](/en/) |
 | ดูภาพรวมเวลาเรียน 4 สัปดาห์ | [Roadmap ภาษาไทย](/th/roadmap) |
 | ฝึกทำโปรเจกต์หลังเรียนพื้นฐาน | [Beginner Projects](/th/projects) |
 
-## สิ่งที่จะสร้างได้หลังเรียน
+## หลังเรียนแล้วคุณจะทำอะไรได้
 
-- โปรแกรมรับข้อมูลจากผู้ใช้และแสดงผลอย่างเป็นระเบียบ
-- เครื่องคิดเลข เกมทายเลข และ quiz app
-- To-do list และ contact book แบบบันทึกไฟล์ได้
-- โค้ดที่แยกเป็น function อ่านง่าย และจัดการ error พื้นฐานได้
-- พื้นฐานสำหรับต่อยอดไป Web, Data, Automation หรือ AI
+- เขียนโปรแกรมรับ input และแสดงผลได้เป็นระเบียบ
+- สร้าง calculator, number guessing game, และ quiz app
+- ทำ to-do list และ contact book แบบบันทึกไฟล์ได้
+- แยกโค้ดเป็น function อ่านง่าย และ handle error พื้นฐานได้
+- มีพื้นฐานพอสำหรับต่อยอดไป Web, Data, Automation หรือ AI
+
+After the course, you will be able to:
+
+- Write programs that take input and print clean output.
+- Build a calculator, a number guessing game, and a quiz app.
+- Create a file-based to-do list and contact book.
+- Split code into readable functions and handle basic errors.
+- Have enough foundation to move into Web, Data, Automation, or AI.
 
 ## วิธีใช้เว็บนี้ให้ได้ผล
 
@@ -54,9 +62,9 @@ You can also use this site if you already know a little Python but want a struct
 2. พิมพ์โค้ดเอง อย่าแค่คัดลอก
 3. เปลี่ยนค่าตัวแปรแล้วสังเกตผลลัพธ์
 4. ทำแบบฝึกหัดท้ายบทก่อนข้ามไปบทถัดไป
-5. กลับมาอ่านบทภาษาอังกฤษเพื่อจำคำศัพท์ที่ใช้ในเอกสารและ error message
+5. กลับมาอ่านบทภาษาอังกฤษเพื่อเก็บคำศัพท์และรูปแบบการอธิบาย
 
-## Course structure
+## Course map
 
 The course starts with setup and syntax, then moves through input/output, conditions, loops, data structures, functions, files, error handling, modules, OOP, projects, and a roadmap for what to learn next.
 

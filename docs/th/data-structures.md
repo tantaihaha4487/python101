@@ -101,7 +101,7 @@ print(numbers[-1])
 
 1. สร้าง list ชื่อ `friends` ที่มีอย่างน้อย 3 ชื่อ จากนั้นใช้ `.append()` เพิ่มชื่ออีก 1 ชื่อ แล้ว `print()` list ทั้งหมด
 2. สร้าง dictionary ชื่อ `book` ที่มี key `title`, `author`, และ `pages` แล้ว `print()` ค่าใน key `title`
-3. ใช้ loop รับคำจากผู้ใช้ 5 คำ เก็บใน list แล้วแปลงเป็น set เพื่อดูว่ามีคำซ้ำอะไรบ้าง
+3. ใช้ loop รับคำจากผู้ใช้ 5 คำ เก็บใน list แล้วแปลงเป็น set หลังจากรับครบทุกคำ เพื่อดูว่ามีคำซ้ำอะไรบ้าง
 
 <details class="answer-reveal">
 <summary>ดูเฉลยแบบฝึกหัด</summary>
@@ -142,8 +142,8 @@ words = []
 for round_number in range(5):
     words.append(input("พิมพ์คำ: "))
 
-    unique_words = set(words)
-    print(unique_words)
+unique_words = set(words)
+print(unique_words)
 ```
 
 </details>
@@ -169,7 +169,7 @@ if name in contacts:
 else:
     phone = input("ยังไม่มีเบอร์นี้ เพิ่มเบอร์ใหม่: ")
     contacts[name] = phone
-    print(contacts)
+    print(f"เพิ่มแล้ว: {name} -> {phone}")
 ```
 
 </details>

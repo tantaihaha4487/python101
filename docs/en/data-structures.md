@@ -169,7 +169,7 @@ if name in contacts:
 else:
     phone = input("No phone yet. Add one: ")
     contacts[name] = phone
-    print(contacts)
+    print(f"Added: {name} -> {phone}")
 ```
 
 </details>
