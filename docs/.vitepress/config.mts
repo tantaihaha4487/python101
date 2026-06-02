@@ -109,7 +109,7 @@ export default withMermaid(defineConfig({
     },
     footer: {
       message: 'Python101: learn Python step by step.',
-      copyright: 'Built with VitePress and Bun.'
+      copyright: 'Content by Thanachot P. Built with VitePress and Bun.'
     }
   }
 }))
