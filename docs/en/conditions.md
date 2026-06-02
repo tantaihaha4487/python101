@@ -21,11 +21,11 @@ Python uses indentation to decide which lines belong inside the condition.
 
 ```mermaid
 flowchart TD
-  A[Receive score from user] --> B{Score >= 80?}
-  B -->|Yes| C[Print "Great"]
-  B -->|No| D{Score >= 50?}
-  D -->|Yes| E[Print "Pass"]
-  D -->|No| F[Print "Keep practicing"]
+  A["Receive score from user"] --> B{"Score >= 80?"}
+  B -->|Yes| C["Print Great"]
+  B -->|No| D{"Score >= 50?"}
+  D -->|Yes| E["Print Pass"]
+  D -->|No| F["Print Keep practicing"]
 ```
 
 This diagram shows that Python checks conditions from top to bottom. Once a condition is true, Python follows that path.

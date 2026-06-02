@@ -17,11 +17,11 @@ for number in range(1, 6):
 
 ```mermaid
 flowchart TD
-  A[Start loop] --> B[Get next value from range or list]
-  B --> C{Any value left?}
-  C -->|Yes| D[Run loop block]
+  A["Start loop"] --> B["Get next value from range or list"]
+  B --> C{"Any value left?"}
+  C -->|Yes| D["Run loop block"]
   D --> B
-  C -->|No| E[Exit loop]
+  C -->|No| E["Exit loop"]
 ```
 
 This diagram shows how a `for` loop takes one value, runs the block, then repeats until no values are left.
@@ -41,11 +41,11 @@ print("Login successful")
 
 ```mermaid
 flowchart TD
-  A[Start while] --> B{Condition is true?}
-  B -->|Yes| C[Run loop block]
-  C --> D[Update value related to condition]
+  A["Start while"] --> B{"Condition is true?"}
+  B -->|Yes| C["Run loop block"]
+  C --> D["Update value related to condition"]
   D --> B
-  B -->|No| E[Exit loop]
+  B -->|No| E["Exit loop"]
 ```
 
 ## break and continue

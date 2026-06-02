@@ -62,13 +62,13 @@ The course starts with setup and syntax, then moves through input/output, condit
 
 ```mermaid
 flowchart LR
-  A[Setup] --> B[Syntax]
-  B --> C[Input and Conditions]
-  C --> D[Loops and Data]
-  D --> E[Functions and Files]
-  E --> F[Errors and Modules]
-  F --> G[OOP]
-  G --> H[Beginner Projects]
+  A["Setup"] --> B["Syntax"]
+  B --> C["Input and Conditions"]
+  C --> D["Loops and Data"]
+  D --> E["Functions and Files"]
+  E --> F["Errors and Modules"]
+  F --> G["OOP"]
+  G --> H["Beginner Projects"]
 ```
 
 ## Deployment

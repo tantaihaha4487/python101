@@ -6,10 +6,10 @@ This roadmap is designed for beginners and takes about four weeks. If you have l
 
 ```mermaid
 flowchart LR
-  A[Week 1\nSyntax and Input] --> B[Week 2\nConditions, Loops, Data]
-  B --> C[Week 3\nFunctions, Files, Errors]
-  C --> D[Week 4\nOOP and Projects]
-  D --> E[Choose next path\nWeb, Data, Automation, AI]
+  A["Week 1<br/>Syntax and Input"] --> B["Week 2<br/>Conditions, Loops, Data"]
+  B --> C["Week 3<br/>Functions, Files, Errors"]
+  C --> D["Week 4<br/>OOP and Projects"]
+  D --> E["Choose next path<br/>Web, Data, Automation, AI"]
 ```
 
 ## Week 1: Start coding

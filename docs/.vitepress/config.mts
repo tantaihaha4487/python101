@@ -69,9 +69,10 @@ export default withMermaid(defineConfig({
     theme: 'base',
     flowchart: {
       curve: 'basis',
-      padding: 18,
-      nodeSpacing: 58,
-      rankSpacing: 72
+      padding: 12,
+      nodeSpacing: 36,
+      rankSpacing: 48,
+      useMaxWidth: true
     },
     themeVariables: {
       primaryColor: '#e8f5e9',

@@ -6,10 +6,10 @@
 
 ```mermaid
 flowchart LR
-  A[สัปดาห์ 1\nSyntax และ Input] --> B[สัปดาห์ 2\nCondition, Loop, Data]
-  B --> C[สัปดาห์ 3\nFunction, File, Error]
-  C --> D[สัปดาห์ 4\nOOP และ Projects]
-  D --> E[เลือกสายต่อยอด\nWeb, Data, Automation, AI]
+  A["สัปดาห์ 1<br/>Syntax และ Input"] --> B["สัปดาห์ 2<br/>Condition, Loop, Data"]
+  B --> C["สัปดาห์ 3<br/>Function, File, Error"]
+  C --> D["สัปดาห์ 4<br/>OOP และ Projects"]
+  D --> E["เลือกสายต่อยอด<br/>Web, Data, Automation, AI"]
 ```
 
 ## สัปดาห์ที่ 1: เริ่มเขียนโค้ด

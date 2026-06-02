@@ -49,8 +49,7 @@ samp {
 .vp-doc .mermaid svg {
   display: block;
   width: 100%;
-  min-width: 760px;
-  max-width: none;
+  max-width: 100%;
   height: auto;
   margin: 0 auto;
 }
@@ -83,9 +82,5 @@ samp {
 @media (max-width: 640px) {
   .vp-doc .mermaid {
     padding: 1rem;
-  }
-
-  .vp-doc .mermaid svg {
-    min-width: 640px;
   }
 }
