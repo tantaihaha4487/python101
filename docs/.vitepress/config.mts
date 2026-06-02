@@ -4,7 +4,7 @@ import { withMermaid } from 'vitepress-plugin-mermaid'
 const isProduction = process.env.NODE_ENV === 'production'
 const base = isProduction ? '/python101/' : '/'
 const siteUrl = 'https://docs.thanachot.xyz/python101/'
-const siteDescription = 'Python101 is a detailed beginner Python course in Thai and English with examples, exercises, projects, and Mermaid diagrams.'
+const siteDescription = 'Python101 is a beginner-friendly Python course for Thai learners, with Thai-first lessons, mirrored English explanations, examples, exercises, projects, and Mermaid diagrams.'
 
 const lessons = [
   { text: 'Setup / ติดตั้ง', link: 'setup' },
@@ -37,6 +37,20 @@ function sidebar(prefix: 'th' | 'en') {
   ]
 }
 
+function pagePath(relativePath: string) {
+  return relativePath
+    .replace(/(^|\/)index\.md$/, '$1')
+    .replace(/\.md$/, '')
+}
+
+function pageUrl(relativePath: string) {
+  return new URL(pagePath(relativePath), siteUrl).href
+}
+
+function pageLang(relativePath: string) {
+  return relativePath.startsWith('en/') ? 'en-US' : 'th-TH'
+}
+
 export default withMermaid(defineConfig({
   base,
   lang: 'th-TH',
@@ -48,23 +62,33 @@ export default withMermaid(defineConfig({
   head: [
     ['link', { rel: 'icon', type: 'image/svg+xml', href: `${base}python-icon.svg` }],
     ['link', { rel: 'apple-touch-icon', href: `${base}python-icon.svg` }],
-    ['link', { rel: 'canonical', href: siteUrl }],
     ['meta', { name: 'theme-color', content: '#3776ab' }],
-    ['meta', { name: 'keywords', content: 'Python101, Python beginner course, learn Python Thai, Python ภาษาไทย, VitePress Python course' }],
     ['meta', { property: 'og:type', content: 'website' }],
     ['meta', { property: 'og:site_name', content: 'Python101' }],
-    ['meta', { property: 'og:title', content: 'Python101 - Learn Python from zero' }],
-    ['meta', { property: 'og:description', content: siteDescription }],
-    ['meta', { property: 'og:url', content: siteUrl }],
     ['meta', { property: 'og:image', content: `${siteUrl}og-image.png` }],
     ['meta', { property: 'og:image:type', content: 'image/png' }],
     ['meta', { property: 'og:image:width', content: '1200' }],
     ['meta', { property: 'og:image:height', content: '630' }],
     ['meta', { name: 'twitter:card', content: 'summary_large_image' }],
-    ['meta', { name: 'twitter:title', content: 'Python101 - Learn Python from zero' }],
-    ['meta', { name: 'twitter:description', content: siteDescription }],
     ['meta', { name: 'twitter:image', content: `${siteUrl}og-image.png` }]
   ],
+  transformPageData(pageData) {
+    const canonicalUrl = pageUrl(pageData.relativePath)
+    const pageTitle = pageData.frontmatter.title || pageData.title || 'Python101'
+    const pageDescription = pageData.frontmatter.description || siteDescription
+    const lang = pageLang(pageData.relativePath)
+
+    pageData.frontmatter.lang = lang
+    pageData.frontmatter.head ??= []
+    pageData.frontmatter.head.push(
+      ['link', { rel: 'canonical', href: canonicalUrl }],
+      ['meta', { property: 'og:url', content: canonicalUrl }],
+      ['meta', { property: 'og:title', content: `${pageTitle} | Python101` }],
+      ['meta', { property: 'og:description', content: pageDescription }],
+      ['meta', { name: 'twitter:title', content: `${pageTitle} | Python101` }],
+      ['meta', { name: 'twitter:description', content: pageDescription }]
+    )
+  },
   mermaid: {
     theme: 'base',
     flowchart: {
