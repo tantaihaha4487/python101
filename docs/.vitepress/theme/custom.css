@@ -79,8 +79,55 @@ samp {
   margin-bottom: 0.75rem;
 }
 
+.language-switcher {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.language-switcher__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.75rem;
+  padding: 0.3rem 0.7rem;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 999px;
+  color: var(--vp-c-text-1);
+  background: var(--vp-c-bg-soft);
+  font-weight: 700;
+  line-height: 1;
+  transition:
+    border-color 0.15s ease,
+    color 0.15s ease,
+    background-color 0.15s ease;
+}
+
+.language-switcher__link:hover {
+  border-color: var(--vp-c-brand-2);
+  color: var(--vp-c-brand-1);
+}
+
+.language-switcher__link.is-active {
+  border-color: var(--vp-c-brand-1);
+  color: var(--vp-c-white);
+  background: var(--vp-c-brand-1);
+}
+
+.language-switcher.is-screen-menu {
+  width: 100%;
+}
+
+.language-switcher.is-screen-menu .language-switcher__link {
+  flex: 1;
+}
+
 @media (max-width: 640px) {
   .vp-doc .mermaid {
     padding: 1rem;
+  }
+
+  .language-switcher.is-screen-menu {
+    gap: 0.5rem;
   }
 }

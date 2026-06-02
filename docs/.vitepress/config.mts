@@ -91,9 +91,8 @@ export default withMermaid(defineConfig({
       provider: 'local'
     },
     nav: [
-      { text: 'ไทย', link: '/th/' },
-      { text: 'English', link: '/en/' },
-      { text: 'Projects', link: '/th/projects' }
+      { text: 'Projects', link: '/th/projects' },
+      { component: 'LanguageSwitcher' }
     ],
     sidebar: {
       '/th/': sidebar('th'),
