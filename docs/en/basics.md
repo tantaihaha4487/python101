@@ -36,9 +36,11 @@ print(type(10))
 ```python
 name = "Mali"
 print("Hello", name)
+print("Hello " + name)
 print(f"Hello {name}")
 ```
 
+Use `+` to join text with a text variable, such as `"Hello " + name`.
 An f-string lets you place variable values inside text. It is one of the most common ways to format output in Python.
 
 ## Comments

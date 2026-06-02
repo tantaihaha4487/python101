@@ -38,9 +38,11 @@ print(type(10))
 ```python
 name = "Mali"
 print("Hello", name)
+print("Hello " + name)
 print(f"Hello {name}")
 ```
 
+ใช้ `+` ต่อข้อความกับตัวแปรข้อความได้ เช่น `"Hello " + name`
 `f-string` ช่วยแทรกค่าตัวแปรในข้อความ อ่านง่ายและใช้บ่อยมาก
 
 ## Comment
