@@ -1,8 +1,37 @@
 # Python101
 
-Detailed beginner Python course in Thai first, followed by English. Built with VitePress and Bun.
+Python101 is a beginner-friendly Python course built as a bilingual documentation site. The course is Thai-first, with a mirrored English track for learners who prefer English or want to compare terminology between both languages.
 
-The lessons include Mermaid diagrams for beginner-friendly explanations of control flow and the learning roadmap.
+The site is built with VitePress and Bun. It focuses on clear explanations, small runnable examples, practice tasks, mini projects, and Mermaid diagrams that make programming flow easier to understand.
+
+## Project Goals
+
+- Teach Python from the ground up for first-time programmers
+- Keep Thai and English lessons structurally aligned
+- Explain concepts with examples, exercises, and visual diagrams
+- Provide a lightweight docs site that is easy to build, deploy, and maintain
+- Support deployment under the `/python101/` base path
+
+## Tech Stack
+
+- VitePress for the documentation site
+- Bun for package management and scripts
+- Mermaid for diagrams inside lessons
+- GitHub Pages, Vercel, or Cloudflare Pages for static hosting
+
+## Project Structure
+
+```text
+docs/
+  .vitepress/
+    config.mts          # Site config, navigation, sidebar, base path
+    theme/              # Custom theme entry and CSS
+  th/                   # Thai lessons
+  en/                   # English lessons
+  public/               # Static assets served by VitePress
+```
+
+Lesson order is managed in `docs/.vitepress/config.mts`. When adding a new lesson, add the Thai and English pages and update the shared lesson list so both tracks stay mirrored.
 
 ## Install
 
@@ -16,11 +45,15 @@ bun install
 bun run docs:dev
 ```
 
+The local dev server runs from `/`.
+
 ## Build
 
 ```bash
 bun run docs:build
 ```
+
+The production build outputs static files to `docs/.vitepress/dist`.
 
 ## Preview
 
@@ -28,9 +61,17 @@ bun run docs:build
 bun run docs:preview
 ```
 
+## Content Workflow
+
+1. Add or edit lesson content in `docs/th/` and `docs/en/`.
+2. Keep both language tracks structurally mirrored where possible.
+3. Update `docs/.vitepress/config.mts` when adding new lessons or changing navigation.
+4. Put public assets in `docs/public/` so they work with the configured base path.
+5. Run `bun run docs:build` before committing changes.
+
 ## Deploy
 
-The production build is configured to run under `/python101/` so it can be reverse-proxied from `https://docs.thanachot.xyz/python101/` without changing the browser URL. Local dev still runs from `/`.
+The production build is configured to run under `/python101/` so it can be reverse-proxied from `https://docs.thanachot.xyz/python101/` without changing the browser URL. Local development still runs from `/`.
 
 GitHub Pages deployment is included in `.github/workflows/deploy.yml`.
 
