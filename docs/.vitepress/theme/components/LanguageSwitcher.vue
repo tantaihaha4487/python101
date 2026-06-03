@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { useRoute, useRouter } from 'vitepress'
+import { useRoute, useRouter, withBase } from 'vitepress'
 
 const props = defineProps<{
   screenMenu?: boolean
@@ -33,7 +33,7 @@ function targetPath(lang: 'th' | 'en') {
 
 function navigate(to: string) {
   if (to !== route.path) {
-    router.go(to)
+    router.go(withBase(to))
   }
 }
 </script>
@@ -41,7 +41,7 @@ function navigate(to: string) {
 <template>
   <div class="language-switcher" :class="{ 'is-screen-menu': props.screenMenu }" aria-label="Language switcher">
     <a
-      :href="targetPath('th')"
+      :href="withBase(targetPath('th'))"
       class="language-switcher__link"
       :class="{ 'is-active': currentLang === 'th' }"
       :aria-current="currentLang === 'th' ? 'page' : undefined"
@@ -52,7 +52,7 @@ function navigate(to: string) {
       TH
     </a>
     <a
-      :href="targetPath('en')"
+      :href="withBase(targetPath('en'))"
       class="language-switcher__link"
       :class="{ 'is-active': currentLang === 'en' }"
       :aria-current="currentLang === 'en' ? 'page' : undefined"
