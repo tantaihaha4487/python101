@@ -17,6 +17,8 @@ Welcome to Python101, a beginner Python course in English. You do not need previ
 
 ## Start here
 
+- [Flowchart](./flowchart.md) to practice thinking in steps before writing code
+- [Pseudocode](./pseudocode.md) to outline steps in plain language before coding
 - [Setup](./setup.md) to install Python and run your first file
 - [Basics](./basics.md) to learn variables, data types, and output
 - [Roadmap](./roadmap.md) to see the full learning path
@@ -24,8 +26,9 @@ Welcome to Python101, a beginner Python course in English. You do not need previ
 
 ## What you will learn
 
+- Designing algorithms with flowcharts and pseudocode
 - Installing Python and running `.py` files
-- Variables, data types, comments, and output
+- Variables, data types, operators, comments, and output
 - User input and type conversion
 - Conditions, loops, and data structures
 - Functions, files, error handling, and modules
@@ -33,4 +36,4 @@ Welcome to Python101, a beginner Python course in English. You do not need previ
 
 ## Recommended path
 
-Start with [Setup](./setup.md), then follow the sidebar from top to bottom. If you already know a topic, you can skip ahead, but beginners should follow the order because each lesson builds on the previous one.
+Start with [Flowchart](./flowchart.md) and [Pseudocode](./pseudocode.md) to practice thinking in steps, then move on to [Setup](./setup.md) and follow the sidebar from top to bottom. If you already know a topic, you can skip ahead, but beginners should follow the order because each lesson builds on the previous one.

@@ -7,6 +7,8 @@ const siteUrl = 'https://docs.thanachot.xyz/python101/'
 const siteDescription = 'Python101 is a beginner-friendly Python course for Thai learners, with Thai-first lessons, mirrored English explanations, examples, exercises, projects, and Mermaid diagrams.'
 
 const lessons = [
+  { text: 'Flowchart / ผังงาน', link: 'flowchart' },
+  { text: 'Pseudocode / รหัสเทียม', link: 'pseudocode' },
   { text: 'Setup / ติดตั้ง', link: 'setup' },
   { text: 'Basics / พื้นฐาน', link: 'basics' },
   { text: 'Input & Output', link: 'input-output' },

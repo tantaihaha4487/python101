@@ -67,15 +67,16 @@ You will finish with the ability to write small programs, handle user input, spl
 
 ## Course map
 
-The course starts with setup and syntax, then moves through input/output, conditions, loops, data structures, functions, files, error handling, modules, OOP, projects, and a roadmap for what to learn next.
+The course starts with flowcharts and pseudocode, then setup and syntax, then moves through input/output, conditions, loops, data structures, functions, files, error handling, modules, OOP, projects, and a roadmap for what to learn next.
 
 ```mermaid
 flowchart LR
-  A["Setup"] --> B["Syntax"]
-  B --> C["Input and Conditions"]
-  C --> D["Loops and Data"]
-  D --> E["Functions and Files"]
-  E --> F["Errors and Modules"]
-  F --> G["OOP"]
-  G --> H["Beginner Projects"]
+  A["Flowchart and Pseudocode"] --> B["Setup"]
+  B --> C["Syntax and Operators"]
+  C --> D["Input and Conditions"]
+  D --> E["Loops and Data"]
+  E --> F["Functions and Files"]
+  F --> G["Errors and Modules"]
+  G --> H["OOP"]
+  H --> I["Beginner Projects"]
 ```

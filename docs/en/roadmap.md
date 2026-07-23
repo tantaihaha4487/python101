@@ -6,7 +6,7 @@ This roadmap is designed for beginners and takes about four weeks. If you have l
 
 ```mermaid
 flowchart LR
-  A["Week 1<br/>Syntax and Input"] --> B["Week 2<br/>Conditions, Loops, Data"]
+  A["Week 1<br/>Flowcharts, Pseudocode, Syntax"] --> B["Week 2<br/>Conditions, Loops, Data"]
   B --> C["Week 3<br/>Functions, Files, Errors"]
   C --> D["Week 4<br/>OOP and Projects"]
   D --> E["Choose next path<br/>Web, Data, Automation, AI"]
@@ -14,12 +14,15 @@ flowchart LR
 
 ## Week 1: Start coding
 
+- Read and draw flowcharts from a problem.
+- Write pseudocode before turning it into code.
 - Install Python and an editor.
 - Run `.py` files.
 - Learn variables, strings, numbers, and booleans.
+- Use operators and operator precedence.
 - Practice `print()` and `input()`.
 
-Goal: write programs that accept input and show output.
+Goal: plan a solution with a flowchart or pseudocode, then write programs that accept input and show output.
 
 ## Week 2: Control program flow
 
@@ -58,7 +61,9 @@ Choose a direction:
 
 ## Checklist
 
+- Read and write flowcharts and pseudocode.
 - Explain variables and data types.
+- Use operators and operator precedence correctly.
 - Use conditions and loops.
 - Use lists and dictionaries.
 - Write functions.
