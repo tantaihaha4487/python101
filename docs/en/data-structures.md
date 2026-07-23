@@ -20,6 +20,22 @@ Output:
 4
 ```
 
+`.index()` reports the position of a value. Because index counting starts at 0, add `+ 1` when you want a position a reader would recognise.
+
+```python
+stations = ["Mo Chit", "Saphan Khwai", "Ari", "Sanam Pao", "Victory Monument"]
+
+print(stations.index("Ari"))
+print(f"Ari is station number {stations.index('Ari') + 1}")
+```
+
+Output:
+
+```text
+2
+Ari is station number 3
+```
+
 ## Tuple
 
 A tuple is like a list, but it cannot be changed after creation. Use it for values that should stay fixed, such as coordinates.
@@ -52,6 +68,42 @@ Output:
 ```text
 Mali
 17
+```
+
+A dictionary has methods for inspecting what is inside, and `in` checks whether a key exists.
+
+```python
+stock = {"pen": 4, "ruler": 2, "eraser": 9, "notebook": 6}
+
+print(stock["eraser"])
+print(stock.keys())
+print(stock.values())
+print("glue" in stock)
+print("pen" in stock)
+```
+
+Output:
+
+```text
+9
+dict_keys(['pen', 'ruler', 'eraser', 'notebook'])
+dict_values([4, 2, 9, 6])
+False
+True
+```
+
+`in` on a dictionary checks the **keys** only, not the values. Asking for a key that does not exist raises `KeyError` straight away — both `stock["glue"]` and `stock[0]` fail, because a dictionary is not accessed by position the way a list is.
+
+To avoid crashing when a key may be missing, use `.get()` with a default value.
+
+```python
+print(stock.get("glue", 0))
+```
+
+Output:
+
+```text
+0
 ```
 
 ## Set
@@ -88,6 +140,166 @@ Output:
 
 `numbers[1:4]` means start at index 1 and stop before index 4, so it returns items at positions 1, 2, and 3.
 
+`range()` can build a list with `list()`, and you can slice the result directly.
+
+```python
+numbers = list(range(0, 51, 5))
+print(numbers)
+print(numbers[1:6])
+```
+
+Output:
+
+```text
+[0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50]
+[5, 10, 15, 20, 25]
+```
+
+Slicing works on text too. `[-3:]` takes the last three characters.
+
+```python
+student_id = "6612345678"
+print(student_id[-3:])
+```
+
+Output:
+
+```text
+678
+```
+
+## Summarize and sort a list
+
+`sum()`, `len()`, `max()`, and `min()` summarise a list immediately.
+
+```python
+scores = [72, 95, 88, 60]
+
+print(sum(scores))
+print(max(scores))
+print(min(scores))
+print(sum(scores) / len(scores))
+```
+
+Output:
+
+```text
+315
+95
+60
+78.75
+```
+
+`sorted()` returns a new sorted list, while `.sort()` sorts the original list in place and returns `None`.
+
+```python
+names = ["Nok", "Anan", "Mali", "Som"]
+
+print(sorted(names))
+print(names)
+```
+
+Output:
+
+```text
+['Anan', 'Mali', 'Nok', 'Som']
+['Nok', 'Anan', 'Mali', 'Som']
+```
+
+When two lists line up with each other, you can find the name of the top scorer with `.index(max(...))`.
+
+```python
+names = ["Nok", "Anan", "Mali", "Som"]
+scores = [72, 95, 88, 60]
+
+print(names[scores.index(max(scores))])
+```
+
+Output:
+
+```text
+Anan
+```
+
+## Turn text into a list
+
+`.split()` cuts text into a list using spaces, or using a separator you choose.
+
+```python
+print("23 99 10".split())
+print("p01,p03,p01".split(","))
+```
+
+Output:
+
+```text
+['23', '99', '10']
+['p01', 'p03', 'p01']
+```
+
+Values from `.split()` are always text, so convert them before doing arithmetic. `map()` converts every item at once.
+
+```python
+parts = "23 99 10".split()
+
+print(list(map(int, parts)))
+```
+
+Output:
+
+```text
+[23, 99, 10]
+```
+
+If `map()` still feels unfamiliar, a loop does exactly the same job.
+
+```python
+numbers = []
+for part in "23 99 10".split():
+    numbers.append(int(part))
+
+print(numbers)
+```
+
+Comma-separated data often carries stray spaces, so clean each piece with `.strip()` first.
+
+```python
+parts = "p01, p03, p01".split(",")
+print(parts)
+print([part.strip() for part in parts])
+```
+
+Output:
+
+```text
+['p01', ' p03', ' p01']
+['p01', 'p03', 'p01']
+```
+
+## Build a dictionary with a loop
+
+When you need to look data up by a short code, store it in a dictionary using that code as the key. This example uses the last three digits of a student ID.
+
+```python
+student_ids = ["6612345001", "6612345002", "6612345003"]
+lookup = {}
+
+for student_id in student_ids:
+    lookup[student_id[-3:]] = student_id
+
+print(lookup)
+print(lookup["002"])
+print(lookup.get("999", "ID not found"))
+```
+
+Output:
+
+```text
+{'001': '6612345001', '002': '6612345002', '003': '6612345003'}
+6612345002
+ID not found
+```
+
 ## Which one should you use?
 
 | Need | Use |
@@ -96,84 +308,126 @@ Output:
 | Fixed group of values | tuple |
 | Named values | dictionary |
 | Unique values | set |
+| Pairing two sets of data | dictionary |
+
+## Common mistakes
+
+- Using an index beyond the end of a list, which raises `IndexError`.
+- Asking for a key that is not in the dictionary, which raises `KeyError`. Use `.get()` when you are unsure.
+- Writing `names = names.sort()` and getting `None`, because `.sort()` does not return a new list. Use `sorted()` when you want one.
+- Forgetting that `.split()` produces text, so values need `int()` or `float()` before arithmetic.
+- Forgetting `.strip()` on comma-separated data, which leaves stray spaces attached to each value.
 
 ## Practice
 
-1. Create a `friends` list with at least three names, use `.append()` to add one more name, then `print()` the full list.
-2. Create a `book` dictionary with `title`, `author`, and `pages` keys, then `print()` the value from the `title` key.
-3. Use a loop to ask for five words, store them in a list, then convert the list to a set to see which words are duplicated.
+1. Given `numbers = list(range(0, 51, 5))`, write down the result of `numbers[1:6]` and the average of that slice.
+2. Given `stock = {"pen": 4, "ruler": 2, "eraser": 9, "notebook": 6}`, write down the result of `stock["eraser"]`, `stock[0]`, `stock.keys()`, `stock.values()`, `"glue" in stock`, and `"pen" in stock`.
+3. Given `members = ["Nok", "Anan", "Mali", "Som"]` and `points = [72, 95, 88, 60]`, ask for a new member name and a space-separated line of scores, then print the total number of members, the name with the highest score, and all names in alphabetical order.
 
 <details class="answer-reveal">
 <summary>Show practice answer</summary>
 
 ### Answer 1
 
-Use a list when the data is an ordered collection that can grow or change.
+The slice starts at index 1 and stops before index 6, then the average comes from `sum()` divided by `len()`.
 
 ```python
-friends = ["Mali", "Anan", "Nok"]
-friends.append("Som")
-print(friends)
+numbers = list(range(0, 51, 5))
+selected = numbers[1:6]
+
+print(selected)
+print(sum(selected) / len(selected))
 ```
 
-Output: `['Mali', 'Anan', 'Nok', 'Som']`
+Output:
+
+```text
+[5, 10, 15, 20, 25]
+15.0
+```
 
 ### Answer 2
 
-Use a dictionary when each value has a named key, such as `title`, `author`, and `pages`, and you want to look it up by key.
+`stock[0]` raises `KeyError` because a dictionary is accessed by key, not by position, and `in` checks keys only.
 
 ```python
-book = {
-    "title": "Python Adventure",
-    "author": "Mali",
-    "pages": 120
-}
-print(book["title"])
+stock = {"pen": 4, "ruler": 2, "eraser": 9, "notebook": 6}
+
+print(stock["eraser"])
+print(stock.keys())
+print(stock.values())
+print("glue" in stock)
+print("pen" in stock)
 ```
 
-Output: `Python Adventure`
+Output:
+
+```text
+9
+dict_keys(['pen', 'ruler', 'eraser', 'notebook'])
+dict_values([4, 2, 9, 6])
+False
+True
+```
+
+`stock[0]` gives `KeyError: 0`.
 
 ### Answer 3
 
-Collect all words in a list first, then convert to a set to remove duplicates.
+Use `.split()` to separate the scores, `map(int, ...)` to convert them, then `.index(max(...))` to find the top scorer.
 
 ```python
-words = []
-for round_number in range(5):
-    words.append(input("Type a word: "))
+members = ["Nok", "Anan", "Mali", "Som"]
+points = [72, 95, 88, 60]
 
-unique_words = set(words)
-print(unique_words)
+members.append(input("New member name: "))
+points.extend(map(int, input("New scores (space separated): ").split()))
+
+print(f"Total members: {len(members)}")
+print(f"Highest score: {members[points.index(max(points))]}")
+print(sorted(members))
 ```
 
 </details>
 
 ## Mini challenge
 
-Create a contact book with a dictionary where each name is a key and each phone number is a value. Ask for a name to search. If it exists, print the phone number; if not, ask for a new phone number, add it, and show the updated contact.
+Create a shop checkout program. Read three products, one per line, each as `code, price`, and store them in a dictionary. Then read a shopping cart as codes separated by commas and print the total, making sure a product picked more than once is charged every time.
 
 <details class="answer-reveal">
 <summary>Show mini challenge answer</summary>
 
-Use a dictionary because the contact name can be the key and the phone number can be the value. This covers both finding an existing name and adding a new one.
+Use `.split(",")` to separate the fields, `.strip()` to remove stray spaces, and `float()` to convert the price. Looping over the cart adds each item in turn, so duplicates are charged automatically.
 
 ```python
-contacts = {
-    "Mali": "080-111-1111",
-    "Anan": "080-222-2222"
-}
+prices = {}
 
-name = input("Find a name: ")
-if name in contacts:
-    print(f"{name}'s phone: {contacts[name]}")
-else:
-    phone = input("No phone yet. Add one: ")
-    contacts[name] = phone
-    print(f"Added: {name} -> {phone}")
+for number in range(3):
+    line = input(f"Product {number + 1} (code, price): ")
+    code, price = line.split(",")
+    prices[code.strip()] = float(price.strip())
+
+cart = input("Shopping cart (codes separated by commas): ").split(",")
+
+total = 0
+for code in cart:
+    total += prices[code.strip()]
+
+print(f"Total {total:.2f}")
+```
+
+Example run:
+
+```text
+Product 1 (code, price): p01, 12.50
+Product 2 (code, price): p02, 8.00
+Product 3 (code, price): p03, 25.75
+Shopping cart (codes separated by commas): p01,p03,p01
+Total 50.75
 ```
 
 </details>
 
 ## Summary
 
-Data structures help you organize data correctly for the problem you are solving.
+Data structures help you organize data correctly for the problem you are solving. You can now slice data, summarise and sort it with `sum()` and `sorted()`, turn text into a list with `.split()`, and look values up by key with a dictionary.
