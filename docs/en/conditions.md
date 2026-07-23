@@ -17,6 +17,8 @@ else:
 
 Python uses indentation to decide which lines belong inside the condition.
 
+Always order an `elif` chain from one end of the range to the other, because Python stops at the first branch that is true. That is why you never need to write `elif score >= 50 and score < 80`. You can plan a chain like this before writing code by using [pseudocode](./pseudocode.md).
+
 ## Decision flow
 
 ```mermaid
@@ -41,6 +43,36 @@ This diagram shows that Python checks conditions from top to bottom. Once a cond
 | `>=` | greater than or equal to |
 | `<=` | less than or equal to |
 
+## Comparing text
+
+`==` works on text too, but it treats uppercase and lowercase as different characters.
+
+```python
+print("python" == "Python")
+print("python" == "python")
+```
+
+Output:
+
+```text
+False
+True
+```
+
+A comparison produces a `bool`, so you can `print()` it directly without putting it inside an `if`.
+
+To compare without caring about capitalisation or surrounding spaces, clean the text first with `.strip()` and `.lower()`.
+
+```python
+print("Python ".strip().lower() == "python")
+```
+
+Output:
+
+```text
+True
+```
+
 ## and, or, not
 
 ```python
@@ -59,6 +91,29 @@ if is_admin or is_owner:
     print("Can edit")
 ```
 
+`not` flips true into false and false into true.
+
+```python
+is_logged_in = False
+
+if not is_logged_in:
+    print("Please log in first")
+```
+
+In short: `and` is true when both sides are true, `or` is true when at least one side is true, and `not` reverses the value.
+
+A login check needs both the username and the password to be correct, so it uses `and`.
+
+```python
+username = input("username: ")
+password = input("password: ")
+
+if username == "admin" and password == "1234":
+    print("Login successful")
+else:
+    print("Incorrect username or password")
+```
+
 ## Boolean expressions
 
 A condition should read like a clear sentence. For example, `age >= 18` means age is at least 18.
@@ -74,7 +129,7 @@ A condition should read like a clear sentence. For example, `age >= 18` means ag
 
 1. Ask for `age` and print `Child` if it is under 13, `Teen` if it is under 20, and `Adult` otherwise.
 2. Ask for `score` and print grade A/B/C/D/F using score ranges 80, 70, 60, 50, and below 50.
-3. Ask for `username` and `password`; allow login only when username is `admin` and password is `1234`.
+3. Ask for two words, print `True` or `False` for whether they match exactly including capitalisation, then print a confirmation message only when they match and neither word is empty.
 
 <details class="answer-reveal">
 <summary>Show practice answer</summary>
@@ -113,37 +168,45 @@ else:
 
 ### Answer 3
 
-Both username and password must be correct, so use `and`.
+`==` already compares text case-sensitively, so you can `print()` the result directly, then use `and` to check that they match and neither is empty.
 
 ```python
-username = input("Username: ")
-password = input("Password: ")
-if username == "admin" and password == "1234":
-    print("Login successful")
-else:
-    print("Wrong username or password")
+word1 = input("Word 1: ")
+word2 = input("Word 2: ")
+
+is_same = word1 == word2
+print(is_same)
+
+if is_same and word1 != "":
+    print("The two words match exactly")
 ```
 
 </details>
 
 ## Mini challenge
 
-Create a program that asks for a numeric temperature and suggests clothing for three cases: below 18 is cold, 18 to below 28 is cool, and 28 or higher is hot.
+Create a shipping cost program that asks for a parcel weight in kilograms and prints **both the cost and the delivery time**: up to 1 kg is 30 baht arriving in 1-2 days, more than 1 up to 5 kg is 60 baht arriving in 2-3 days, and more than 5 kg is 120 baht arriving in 3-5 days.
 
 <details class="answer-reveal">
 <summary>Show mini challenge answer</summary>
 
-This example covers three temperature cases: cold, cool, and hot.
+Order the branches from the lightest weight upward, and have each branch produce two values: the cost and the delivery time.
 
 ```python
-temperature = float(input("Temperature today: "))
+weight = float(input("Parcel weight (kg): "))
 
-if temperature < 18:
-    print("Cold: wear a jacket")
-elif temperature < 28:
-    print("Cool: wear a light long-sleeve shirt")
+if weight <= 1:
+    cost = 30
+    days = "1-2 days"
+elif weight <= 5:
+    cost = 60
+    days = "2-3 days"
 else:
-    print("Hot: wear a comfy T-shirt and bring water")
+    cost = 120
+    days = "3-5 days"
+
+print(f"Shipping cost: {cost} baht")
+print(f"Delivery time: {days}")
 ```
 
 </details>

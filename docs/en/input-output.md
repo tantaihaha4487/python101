@@ -71,8 +71,8 @@ Price: 199.99
 
 ## Practice
 
-1. Ask for `name` and `age`, convert `age` to `int`, then print the age ten years from now.
-2. Ask for three scores, convert them to `float`, calculate the average, and print it with two decimal places.
+1. Ask for the prices of two products, convert them to `float`, then print the total with two decimal places.
+2. Ask for the GPA of the first semester and the second semester, convert them to `float`, calculate the average for the year, and print it with two decimal places.
 3. Ask for an item price and discount percentage, convert both to `float`, then print the price after the discount.
 
 <details class="answer-reveal">
@@ -80,24 +80,24 @@ Price: 199.99
 
 ### Answer 1
 
-`input()` returns text, so convert the age with `int()` before adding 10.
+`input()` returns text, so convert each price with `float()` before adding, and use `:.2f` so two decimal places always show.
 
 ```python
-name = input("Name: ")
-age = int(input("Age: "))
-print(f"In 10 years, {name} will be {age + 10} years old.")
+price1 = float(input("Price of item 1: "))
+price2 = float(input("Price of item 2: "))
+total = price1 + price2
+print(f"Total price: {total:.2f}")
 ```
 
 ### Answer 2
 
-Use `float()` so decimal scores work, then divide by the number of subjects.
+Use `float()` because a GPA is a decimal number, then divide by the number of semesters.
 
 ```python
-score1 = float(input("Score 1: "))
-score2 = float(input("Score 2: "))
-score3 = float(input("Score 3: "))
-average = (score1 + score2 + score3) / 3
-print(f"Average score: {average:.2f}")
+gpa1 = float(input("First semester GPA: "))
+gpa2 = float(input("Second semester GPA: "))
+average = (gpa1 + gpa2) / 2
+print(f"Average GPA: {average:.2f}")
 ```
 
 ### Answer 3
